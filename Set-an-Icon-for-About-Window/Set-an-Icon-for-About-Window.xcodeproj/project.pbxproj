@@ -7,38 +7,38 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		7B534D64AEC653F6F169864C /* AppController.j */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.j; path = AppController.j; sourceTree = SOURCE_ROOT; };
-		B5B54F7592694AECB8640E0C /* xcc_general_include.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = xcc_general_include.h; path = .XcodeSupport/xcc_general_include.h; sourceTree = SOURCE_ROOT; };
-		D5894376BADD46B93E869019 /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = .XcodeSupport/AppController.m; sourceTree = SOURCE_ROOT; };
+		25BC45FD9114171112C480BE /* xcc_general_include.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = xcc_general_include.h; path = .XcodeSupport/xcc_general_include.h; sourceTree = SOURCE_ROOT; };
+		76DA48F0A29064B9462CD11E /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = .XcodeSupport/AppController.m; sourceTree = SOURCE_ROOT; };
+		AFED429B90192EF9AD9BCFBE /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = .XcodeSupport/AppController.h; sourceTree = SOURCE_ROOT; };
 		E164FE29172185F500263CE3 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
-		F38246EFA1DE14623E083E6D /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = .XcodeSupport/AppController.h; sourceTree = SOURCE_ROOT; };
+		EB764C25ABC55579A0A96D2F /* AppController.j */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.j; path = AppController.j; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		179F4BAAAF2E64C848518A8A /* Cappuccino Source */ = {
+		2D4C415DBFAED4FA11D0F880 /* Cocoa Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7B534D64AEC653F6F169864C /* AppController.j */,
-			);
-			name = "Cappuccino Source";
-			sourceTree = "<group>";
-		};
-		23C84FF9BED022703E9D0272 /* Cocoa Classes */ = {
-			isa = PBXGroup;
-			children = (
-				F38246EFA1DE14623E083E6D /* AppController.h */,
-				D5894376BADD46B93E869019 /* AppController.m */,
-				B5B54F7592694AECB8640E0C /* xcc_general_include.h */,
+				AFED429B90192EF9AD9BCFBE /* AppController.h */,
+				76DA48F0A29064B9462CD11E /* AppController.m */,
+				25BC45FD9114171112C480BE /* xcc_general_include.h */,
 			);
 			name = "Cocoa Classes";
+			sourceTree = "<group>";
+		};
+		66EA4AF48291E818E13A7D13 /* Cappuccino Source */ = {
+			isa = PBXGroup;
+			children = (
+				EB764C25ABC55579A0A96D2F /* AppController.j */,
+			);
+			name = "Cappuccino Source";
 			sourceTree = "<group>";
 		};
 		E164FE221721857400263CE3 /*  */ = {
 			isa = PBXGroup;
 			children = (
 				E164FE29172185F500263CE3 /* Resources */,
-				23C84FF9BED022703E9D0272 /* Cocoa Classes */,
-				179F4BAAAF2E64C848518A8A /* Cappuccino Source */,
+				2D4C415DBFAED4FA11D0F880 /* Cocoa Classes */,
+				66EA4AF48291E818E13A7D13 /* Cappuccino Source */,
 			);
 			sourceTree = "<group>";
 		};

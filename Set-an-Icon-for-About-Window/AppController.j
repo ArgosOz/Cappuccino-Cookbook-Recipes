@@ -17,19 +17,28 @@ var GITHUB_REPO = 0
 @implementation AppController : CPObject
 {
     @outlet CPWindow    theWindow;
-    @outlet CPWebView   _webViewTop;
-    @outlet CPWebView   _webViewBottom;
+    /* @outlet CPWebView   _webViewTop; */
+    /* @outlet CPWebView   _webViewBottom; */
 
     @outlet CPScrollView    _scrollView;
     @outlet CPView          _viewForScrolling;
+
+    @outlet CPImageView     _code1View;
+    @outlet CPImageView     _code2View;
 }
 
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
 {
 
-    [_webViewTop setMainFrameURL:@"Resources/infoplistxml.html"];
-    [_webViewBottom setMainFrameURL:@"Resources/infoplistxmladd.html"];
+    /* [_webViewTop setMainFrameURL:@"Resources/infoplistxml.html"]; */
+    /* [_webViewBottom setMainFrameURL:@"Resources/infoplistxmladd.html"]; */
 
+    [_code1View setBackgroundColor:[CPColor whiteColor]];
+    [_code2View setBackgroundColor:[CPColor whiteColor]];
+
+    // Necessary to get rid of the ugly scrollbars on Windows
+    [CPScrollView setGlobalScrollerStyle:CPScrollerStyleOverlay];
+    
     [_scrollView setDocumentView:_viewForScrolling];
 }
 

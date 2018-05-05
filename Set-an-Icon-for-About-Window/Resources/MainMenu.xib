@@ -3,7 +3,6 @@
     <dependencies>
         <deployment version="1050" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -63,55 +62,55 @@
         </window>
         <customObject id="450" customClass="AppController">
             <connections>
+                <outlet property="_code1View" destination="pIU-Ma-NrQ" id="mQL-fY-KFx"/>
+                <outlet property="_code2View" destination="CWa-4F-x5b" id="xdr-Qa-ftQ"/>
                 <outlet property="_scrollView" destination="2hX-nl-TaM" id="7CN-ZO-mBd"/>
                 <outlet property="_viewForScrolling" destination="MNS-gP-RLd" id="s9u-o2-OVq"/>
-                <outlet property="_webViewBottom" destination="bms-R3-pcd" id="Du1-3l-Bpc"/>
-                <outlet property="_webViewTop" destination="yvD-Zg-bZl" id="d3C-q1-uLE"/>
                 <outlet property="theWindow" destination="371" id="459"/>
             </connections>
         </customObject>
         <window title="Set an icon for the about window..." allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="qjQ-HQ-cC4" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES" utility="YES" HUD="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="174" y="240" width="546" height="719"/>
+            <rect key="contentRect" x="174" y="240" width="546" height="645"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" misplaced="YES" id="dry-Uk-B7h">
-                <rect key="frame" x="0.0" y="0.0" width="546" height="719"/>
+                <rect key="frame" x="0.0" y="0.0" width="546" height="645"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="2hX-nl-TaM">
-                        <rect key="frame" x="-1" y="-1" width="548" height="721"/>
+                    <scrollView misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="2hX-nl-TaM">
+                        <rect key="frame" x="-1" y="-1" width="548" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="muI-o2-Yjt">
-                            <rect key="frame" x="1" y="1" width="546" height="719"/>
+                            <rect key="frame" x="1" y="1" width="546" height="645"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <view id="pLw-xk-JCv">
-                                    <rect key="frame" x="0.0" y="0.0" width="531" height="704"/>
+                                    <rect key="frame" x="15" y="0.0" width="531" height="704"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="0.45916606104651164" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
-                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="hCZ-pr-WKc">
-                            <rect key="frame" x="1" y="704" width="546" height="16"/>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="hCZ-pr-WKc">
+                            <rect key="frame" x="-100" y="-100" width="546" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="mR4-A0-iO1">
-                            <rect key="frame" x="531" y="1" width="16" height="719"/>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="mR4-A0-iO1">
+                            <rect key="frame" x="-100" y="-100" width="16" height="719"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="770" y="-317"/>
+            <point key="canvasLocation" x="770" y="-354.5"/>
         </window>
         <customView misplaced="YES" id="MNS-gP-RLd">
-            <rect key="frame" x="0.0" y="0.0" width="546" height="719"/>
+            <rect key="frame" x="0.0" y="0.0" width="546" height="630"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="UTK-dp-j9V">
-                    <rect key="frame" x="18" y="562" width="510" height="139"/>
+                    <rect key="frame" x="18" y="473" width="510" height="139"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="lPg-vU-eIx">
                         <font key="font" metaFont="system"/>
@@ -126,15 +125,13 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <webView misplaced="YES" id="yvD-Zg-bZl">
-                    <rect key="frame" x="20" y="224" width="506" height="330"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
-                        <nil key="identifier"/>
-                    </webPreferences>
-                </webView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="pIU-Ma-NrQ">
+                    <rect key="frame" x="20" y="182" width="506" height="287"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="code1" id="J8X-mU-Iaz"/>
+                </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="UC2-S5-WAE">
-                    <rect key="frame" x="18" y="138" width="510" height="62"/>
+                    <rect key="frame" x="18" y="96" width="510" height="62"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="vAh-tl-Chc">
                         <font key="font" metaFont="system"/>
@@ -145,18 +142,18 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <webView misplaced="YES" id="bms-R3-pcd">
-                    <rect key="frame" x="20" y="32" width="506" height="105"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
-                        <nil key="identifier"/>
-                    </webPreferences>
-                </webView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="CWa-4F-x5b">
+                    <rect key="frame" x="20" y="13" width="506" height="87"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="code2" id="xNF-G0-2SI"/>
+                </imageView>
             </subviews>
-            <point key="canvasLocation" x="1391" y="-318"/>
+            <point key="canvasLocation" x="1391" y="-363"/>
         </customView>
     </objects>
     <resources>
+        <image name="code1" width="485" height="263"/>
+        <image name="code2" width="486" height="63"/>
         <image name="if_hand-pointer-o_1608373" width="512" height="512"/>
     </resources>
 </document>

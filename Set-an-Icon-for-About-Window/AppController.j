@@ -3,21 +3,45 @@
  * Icon-for-About-Window
  *
  * Created by Argos Oz on May 4, 2018.
- * Copyright 2018, Army of Me, Inc. All rights reserved.
+ * Copyright 2018, Army of Me, Inc. Attribution-NonCommercial-ShareAlike CC BY-NC-SA.
  */
 
 @import <Foundation/Foundation.j>
 @import <AppKit/AppKit.j>
 
+var GITHUB_REPO = 0
+
+
+// TODO Animate the hand pointer.
 
 @implementation AppController : CPObject
 {
     @outlet CPWindow    theWindow;
+    @outlet CPWebView   _webViewTop;
+    @outlet CPWebView   _webViewBottom;
+
+    @outlet CPScrollView    _scrollView;
+    @outlet CPView          _viewForScrolling;
 }
 
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
 {
-    // This is called when the application is done loading.
+
+    [_webViewTop setMainFrameURL:@"Resources/infoplistxml.html"];
+    [_webViewBottom setMainFrameURL:@"Resources/infoplistxmladd.html"];
+
+    [_scrollView setDocumentView:_viewForScrolling];
+}
+
+- (IBAction) openLinkInNewTab:(id)sender
+{
+    console.info(sender);
+    console.info([sender title]);
+    switch([sender tag]){
+        case GITHUB_REPO:
+            window.open("https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Set-an-Icon-for-About-Window", "_blank");
+            break;
+    }
 }
 
 - (void)awakeFromCib
@@ -27,7 +51,9 @@
     // It's a useful hook for setting up current UI values, and other things.
 
     // In this case, we want the window from Cib to become our full browser window
-    [theWindow setFullPlatformWindow:NO];
+    [theWindow setFullPlatformWindow:YES];
 }
+
+
 
 @end

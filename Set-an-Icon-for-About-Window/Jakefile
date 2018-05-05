@@ -1,6 +1,6 @@
 /*
  * Jakefile
- * Icon-for-About-Window
+ * Set-an-Icon-for-About-Window
  *
  * Created by Argos Oz on May 4, 2018.
  * Copyright 2018, Army of Me, Inc. All rights reserved.
@@ -26,12 +26,12 @@ app (projectName, function(task)
     task.setBuildIntermediatesPath(FILE.join("Build", "IconForAboutWindow.build", configuration));
     task.setBuildPath(FILE.join("Build", configuration));
 
-    task.setProductName("Icon-for-About-Window");
+    task.setProductName("Set-an-Icon-for-About-Window");
     task.setIdentifier("com.yourcompany.IconForAboutWindow");
     task.setVersion("1.0");
     task.setAuthor("Army of Me, Inc.");
     task.setEmail("feedback @nospam@ yourcompany.com");
-    task.setSummary("Icon-for-About-Window");
+    task.setSummary("Set-an-Icon-for-About-Window");
     task.setSources(new FileList("**/*.j").exclude(FILE.join("Build", "**")).exclude(FILE.join("Frameworks", "Source", "**")));
     task.setResources(new FileList("Resources/**"));
     task.setIndexFilePath("index.html");

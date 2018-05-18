@@ -11,6 +11,8 @@
 
 @import <MBSteps/StepsWindowController.j>
 
+var GITHUB_REPO = 0;
+
 @implementation AppController : CPObject
 {
     @outlet CPWindow            theWindow;
@@ -24,6 +26,8 @@
     _stepsWindowController = [StepsWindowController alloc];
     [_stepsWindowController setPathPrefix:@"../../"];
     [_stepsWindowController initWithWindowCibPath:@"../../Frameworks/MBSteps/Resources/StepsWindow.cib" owner:_stepsWindowController];
+    var currentFrameSize = [[_stepsWindowController window] frame].size;
+    [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, 288)];
     [_stepsWindowController showWindow:self];
 
     _outlineViewData = [[CPMutableDictionary alloc] init];
@@ -55,6 +59,27 @@
 
     // In this case, we want the window from Cib to become our full browser window
     [theWindow setFullPlatformWindow:YES];
+}
+
+// ┌───────────────────────────────────────────────────────┐
+// │                                                       │
+// │                                                       │██
+// │                        Actions                        │██
+// │                                                       │██
+// │                                                       │██
+// └───────────────────────────────────────────────────────┘██
+//   █████████████████████████████████████████████████████████
+//   █████████████████████████████████████████████████████████
+
+
+
+- (IBAction) openLinkInNewTab:(id)sender
+{
+    switch([sender tag]){
+        case GITHUB_REPO:
+            window.open("https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Cell-Based-CPOutlineView", "_blank");
+            break;
+    }
 }
 
 // ┌───────────────────────────────────────────────────────┐

@@ -42,9 +42,10 @@
                 <menuItem title="Links" id="103">
                     <menu key="submenu" title="Links" id="106">
                         <items>
-                            <menuItem title="NewApplication Help" keyEquivalent="?" id="111">
+                            <menuItem title="GitHub Repository for this Project..." keyEquivalent="g" id="111">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
-                                    <action selector="showHelp:" target="-1" id="360"/>
+                                    <action selector="openLinkInNewTab:" target="450" id="ja3-Aa-nGK"/>
                                 </connections>
                             </menuItem>
                         </items>

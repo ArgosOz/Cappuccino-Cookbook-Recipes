@@ -43,9 +43,10 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Links" systemMenu="help" id="jWL-x7-rHV">
                         <items>
-                            <menuItem title="Application Help" keyEquivalent="?" id="9cR-tE-kAS">
+                            <menuItem title="GitHub Repository for this Project..." keyEquivalent="g" id="9cR-tE-kAS">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
-                                    <action selector="showHelp:" target="-1" id="MWJ-P4-7hl"/>
+                                    <action selector="openLinkInNewTab:" target="450" id="KJp-JD-hMt"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -68,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" id="faw-Dl-Ab5">
                             <rect key="frame" x="1" y="1" width="238" height="241"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" indentationPerLevel="16" outlineTableColumn="kF4-HB-C9p" id="alL-N7-pWU">
                                     <rect key="frame" x="0.0" y="0.0" width="238" height="241"/>

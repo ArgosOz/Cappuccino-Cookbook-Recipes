@@ -11,6 +11,7 @@
 
 @import <MBSteps/StepsWindowController.j>
 
+var GITHUB_REPO = 0;
 
 @implementation AppController : CPObject
 {
@@ -23,8 +24,12 @@
 {
     _stepsWindowController = [StepsWindowController alloc];
     [_stepsWindowController setPathPrefix:@"../../"];
+
     [_stepsWindowController initWithWindowCibPath:@"../../Frameworks/MBSteps/Resources/StepsWindow.cib" owner:_stepsWindowController];
     [_stepsWindowController showWindow:self];
+
+    var currentFrameSize = [[_stepsWindowController window] frame].size;
+    [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, 263)];
 
 }
 
@@ -37,5 +42,27 @@
     // In this case, we want the window from Cib to become our full browser window
     [theWindow setFullPlatformWindow:YES];
 }
+
+// ┌───────────────────────────────────────────────────────┐
+// │                                                       │
+// │                                                       │██
+// │                        Actions                        │██
+// │                                                       │██
+// │                                                       │██
+// └───────────────────────────────────────────────────────┘██
+//   █████████████████████████████████████████████████████████
+//   █████████████████████████████████████████████████████████
+
+
+
+- (IBAction) openLinkInNewTab:(id)sender
+{
+    switch([sender tag]){
+        case GITHUB_REPO:
+            window.open("https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPSplitView-Basics", "_blank");
+            break;
+    }
+}
+
 
 @end

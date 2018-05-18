@@ -1,0 +1,12 @@
+- (BOOL) outlineView     :(CPOutlineView)outlineView 
+         isItemExpandable:(id)item
+{
+    if ([item isKindOfClass:[CPArray class]] 
+    	|| [item isKindOfClass:[CPMutableDictionary class]]) 
+    {
+        if ([item count] > 0)
+        	return YES;
+    }
+
+    return NO;
+}

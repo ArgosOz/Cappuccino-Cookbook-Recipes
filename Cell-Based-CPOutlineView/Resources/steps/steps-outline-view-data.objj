@@ -1,0 +1,21 @@
+_outlineViewData = [[CPMutableDictionary alloc] init];
+
+// item 1
+var items = [CPArray arrayWithObjects:@"Spider-Man", 
+    @"Hulk", @"Iron Man", @"Captain America", 
+    @"Daredevil", @"Wolverine", @"Thor", nil];
+[_outlineViewData setObject:items forKey:@"Marvel"];
+
+// item 2
+// You can also create an array using the syntax below.
+items = ["Superman", @"Batman", 
+    @"Wonder Woman", @"Joker", "Flash", "Catwoman"];
+[_outlineViewData setObject:items forKey:@"DC"];
+
+// item 3
+items = [@"The Incredibles", @"Toy Story", 
+    @"Monsters Inc.", @"Finding Nemo", @"Inside Out"];
+[_outlineViewData setObject:items forKey:@"Pixar"];
+
+// Let the Outline View know that the data is ready.
+[_outlineView reloadData];

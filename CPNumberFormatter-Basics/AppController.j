@@ -78,7 +78,7 @@
     var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPDateFormatter-Basics";
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPNumberFormatter-Basics";
             break;
         case CLASS_REFERENCE:
             url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_number_formatter.html";

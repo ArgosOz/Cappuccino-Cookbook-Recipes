@@ -100,7 +100,7 @@
 		<key>type</key>
 		<integer>0</integer>
 		<key>content</key>
-		<string>Since this is an Outline View, it need to know if the current item is expandable or not...</string>
+		<string>Since this is an Outline View, it needs to know if the current item is expandable or not...</string>
 	</dict>
 	<dict>
 		<key>type</key>

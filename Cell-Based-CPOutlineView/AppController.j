@@ -11,8 +11,6 @@
 
 @import <MBSteps/StepsWindowController.j>
 
-var GITHUB_REPO = 0;
-
 @implementation AppController : CPObject
 {
     @outlet CPWindow            theWindow;
@@ -24,7 +22,7 @@ var GITHUB_REPO = 0;
 - (void) applicationDidFinishLaunching:(CPNotification)aNotification
 {
     _stepsWindowController = [StepsWindowController alloc];
-    [_stepsWindowController setPathPrefix:@"../../"];
+    /* [_stepsWindowController setPathPrefix:@"../../"]; */
     [_stepsWindowController initWithWindowCibPath:@"../../Frameworks/MBSteps/Resources/StepsWindow.cib" owner:_stepsWindowController];
     var currentFrameSize = [[_stepsWindowController window] frame].size;
     [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, 288)];
@@ -75,11 +73,37 @@ var GITHUB_REPO = 0;
 
 - (IBAction) openLinkInNewTab:(id)sender
 {
+    var GITHUB_REPO = 0;
+    var CLASS_REFERENCE = 1;
+    var DASH = 999;
+
+    var TEST_APP1 = 2;
+    var TEST_APP2 = 3;
+    var TEST_APP3 = 4;
+    var url;
+    var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            window.open("https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Cell-Based-CPOutlineView", "_blank");
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Cell-Based-CPOutlineView";
+            break;
+        case CLASS_REFERENCE:
+            url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_outline_view.html";
+            break;
+        case DASH:
+            url = "dash://cappuccino:CPOutlineView";
+            openNewTab = "_self";
+            break;
+        case TEST_APP1:
+            url = "https://cappuccino-testbook.5apps.com/?t=CPOutlineViewTest";
+            break;
+        case TEST_APP2:
+            url = "https://cappuccino-testbook.5apps.com/?t=CPOutlineViewCibTest";
+            break;
+        case TEST_APP3:
+            url = "https://cappuccino-testbook.5apps.com/?t=CPOutlineViewViewBasedCibTest";
             break;
     }
+    window.open(url, openNewTab);
 }
 
 // ┌───────────────────────────────────────────────────────┐

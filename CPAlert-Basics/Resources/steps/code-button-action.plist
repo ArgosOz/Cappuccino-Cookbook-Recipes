@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Button click will call the showAlerts: method...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>We&apos;ll create a new CPAlert object here...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Copy the code below into your AppController.j file. </string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>2</integer>
+		<key>language</key>
+		<string>objc</string>
+		<key>codeFileURL</key>
+		<string>Resources/steps/ibaction.objj</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string> </string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Since we&apos;ve set CPAlert delegate to AppController above; we will receive alertDidEnd:returnCode: messages in the AppController.j file...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>After clicking a button on alert window; CPAlert will return the code of the button...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Here we&apos;ll create and display another type of CPAlert, a modal sheet...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Copy the code below into your AppController.j file. </string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>2</integer>
+		<key>language</key>
+		<string>objc</string>
+		<key>codeFileURL</key>
+		<string>Resources/steps/alertdidend-returncode.objj</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string> </string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>This type of CPAlert has an additional contextInfo property...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>After clicking a button on the modal sheet window; CPAlert will return the code of the button and the contextInfo...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Copy the code below into your AppController.j file. </string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>2</integer>
+		<key>language</key>
+		<string>objc</string>
+		<key>codeFileURL</key>
+		<string>Resources/steps/sheetmodalended.objj</string>
+	</dict>
+</array>
+</plist>

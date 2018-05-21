@@ -1,0 +1,9 @@
+- (void) sheetModalEnded:(CPAlert)anAlert 
+         returnCode     :(CPInteger)returnCode 
+         contextInfo    :(id)contextInfo
+{
+    console.info(
+      contextInfo, 
+      "It's coming from the modal sheet."
+    );
+}

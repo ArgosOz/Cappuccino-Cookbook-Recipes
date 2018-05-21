@@ -54,38 +54,6 @@
 		<key>type</key>
 		<integer>0</integer>
 		<key>content</key>
-		<string>After that, If you see something like this:</string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>1</integer>
-		<key>width</key>
-		<integer>540</integer>
-		<key>height</key>
-		<integer>125</integer>
-		<key>imageName</key>
-		<string>103.png</string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>0</integer>
-		<key>content</key>
-		<string>You need to set your narwhal bin path using Additional Toolchain Paths area.</string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>1</integer>
-		<key>width</key>
-		<integer>540</integer>
-		<key>height</key>
-		<integer>119</integer>
-		<key>imageName</key>
-		<string>104.png</string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>0</integer>
-		<key>content</key>
 		<string> </string>
 	</dict>
 	<dict>

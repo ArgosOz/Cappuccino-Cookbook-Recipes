@@ -1,0 +1,15 @@
+- (IBAction) showAlerts:(id)sender
+{
+
+    var anAlert = [CPAlert 
+      alertWithMessageText:@"This is a modal alert!"
+      defaultButton:@"OK"
+      alternateButton:@"Cancel"
+      otherButton:nil
+      informativeTextWithFormat:@"Something important has happened!"
+    ];
+
+    [anAlert setDelegate:self];
+    [anAlert runModal];
+
+}

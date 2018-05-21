@@ -18,22 +18,10 @@
                 <menuItem title="Cell Based CPOutlineView" id="56">
                     <menu key="submenu" title="Cell Based CPOutlineView" systemMenu="apple" id="57">
                         <items>
-                            <menuItem title="About NewApplication" id="58">
+                            <menuItem title="About..." id="58">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="236">
-                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                            </menuItem>
-                            <menuItem title="Preferences…" keyEquivalent="," id="129"/>
-                            <menuItem isSeparatorItem="YES" id="143">
-                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                            </menuItem>
-                            <menuItem title="Quit NewApplication" keyEquivalent="q" id="136">
-                                <connections>
-                                    <action selector="terminate:" target="-3" id="449"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -47,6 +35,37 @@
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
                                     <action selector="openLinkInNewTab:" target="450" id="KJp-JD-hMt"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Class Reference" tag="1" keyEquivalent="C" id="G1H-Hc-LlM">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="1gv-Gu-Vbt"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="qEV-i8-fcF">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="DhY-w0-RPd"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="5Yc-3n-bbd"/>
+                            <menuItem title="CPOutlineViewTest" tag="2" id="rlt-2d-vmw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="tXy-XL-iCs"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="CPOutlineViewCibTest" tag="3" id="e2o-y4-fJz">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="iuB-0X-WQa"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="CPOutlineViewViewBasedCibTest" tag="4" id="rYO-Rh-WoZ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="bLp-lq-r6T"/>
                                 </connections>
                             </menuItem>
                         </items>

@@ -1,0 +1,57 @@
+var formatter = [[CPDateFormatter alloc] init];
+
+[formatter setTimeStyle:CPDateFormatterFullStyle];
+[formatter setDateStyle:CPDateFormatterFullStyle];
+console.info(@"Full Style  :  %s", 
+		[formatter stringFromDate:[CPDate date]]
+	);
+
+
+[formatter setTimeStyle:CPDateFormatterLongStyle];
+[formatter setDateStyle:CPDateFormatterLongStyle];
+console.info(@"Long Style  :  %s", 
+		[formatter stringFromDate:[CPDate date]]
+	);
+
+
+[formatter setTimeStyle:CPDateFormatterMediumStyle];
+[formatter setDateStyle:CPDateFormatterMediumStyle];
+console.info(@"Medium Style:  %s", 
+		[formatter stringFromDate:[CPDate date]]
+	);
+
+
+[formatter setTimeStyle:CPDateFormatterShortStyle];
+[formatter setDateStyle:CPDateFormatterShortStyle];
+console.info(@"Short Style :  %s", 
+		[formatter stringFromDate:[CPDate date]]
+	);
+
+
+[formatter setTimeStyle:CPDateFormatterNoStyle];
+[formatter setDateStyle:CPDateFormatterFullStyle];
+console.info(@"No Time     :  %s", 
+		[formatter stringFromDate:[CPDate date]]
+	);
+
+
+[formatter setTimeStyle:CPDateFormatterFullStyle];
+[formatter setDateStyle:CPDateFormatterNoStyle];
+console.info(@"No Date     :  %s", 
+		[formatter stringFromDate:[CPDate date]]
+	);
+
+
+[formatter setTimeStyle:CPDateFormatterNoStyle];
+[formatter setDateStyle:CPDateFormatterFullStyle];
+[formatter setDoesRelativeDateFormatting:YES];
+console.info(@"Relative    :  %s", 
+		[formatter stringFromDate:[CPDate date]]
+	);
+
+
+[formatter setDateStyle:CPDateFormatterShortStyle];
+var date = [formatter dateFromString:@"9/10/2018"];
+console.info(@"Date String :  %s", 
+		[date description]
+	);

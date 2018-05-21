@@ -14,11 +14,11 @@ var ENV = require("system").env,
     app = require("cappuccino/jake").app,
     configuration = ENV["CONFIG"] || ENV["CONFIGURATION"] || ENV["c"] || "Debug",
     OS = require("os"),
-    projectName = "0101CPTableView";
+    projectName = "Cell-Based-CPTableView";
 
 app (projectName, function(task)
 {
-    ENV["OBJJ_INCLUDE_PATHS"] = "Frameworks";
+    ENV["OBJJ_INCLUDE_PATHS"] = "../../Frameworks";
 
     if (configuration === "Debug")
         ENV["OBJJ_INCLUDE_PATHS"] = FILE.join(ENV["OBJJ_INCLUDE_PATHS"], configuration);
@@ -26,7 +26,7 @@ app (projectName, function(task)
     task.setBuildIntermediatesPath(FILE.join("Build", "0101CPTableView.build", configuration));
     task.setBuildPath(FILE.join("Build", configuration));
 
-    task.setProductName("0101-CPTableView");
+    task.setProductName("Cell-Based-CPTableView");
     task.setIdentifier("com.yourcompany.0101CPTableView");
     task.setVersion("1.0");
     task.setAuthor("Your Company");

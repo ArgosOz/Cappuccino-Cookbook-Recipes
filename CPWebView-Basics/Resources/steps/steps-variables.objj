@@ -1,0 +1,5 @@
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+    @outlet CPWebView           _webView;
+}

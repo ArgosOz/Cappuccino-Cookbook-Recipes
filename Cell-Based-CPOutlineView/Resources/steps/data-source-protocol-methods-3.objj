@@ -5,7 +5,7 @@
     	|| [item isKindOfClass:[CPMutableDictionary class]]) 
     {
         if ([item count] > 0)
-        	return YES;
+            return YES;
     }
 
     return NO;

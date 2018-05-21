@@ -1,0 +1,34 @@
+- (void) alertDidEnd  :(CPAlert)alert 
+         returnCode   :(int)returnCode
+{
+    var buttonName;
+    switch(returnCode){
+        case 0:
+            buttonName = "OK";
+            break;
+        case 1:
+            buttonName = "Cancel";
+            break;
+    }
+    console.info(buttonName, "button is clicked. Am I right?");
+
+
+    var anAlert = [CPAlert 
+      alertWithMessageText:@"This a sheet modal..."
+      defaultButton:@"Default Button"
+      alternateButton:@"Cancel"
+      otherButton:@"Other Button"
+      informativeTextWithFormat:@"I know what you did!"
+    ];
+
+    [anAlert setDelegate:self];
+
+    [anAlert 
+      beginSheetModalForWindow:theWindow
+      modalDelegate:self
+      didEndSelector:
+         @selector(sheetModalEnded:returnCode:contextInfo:)
+      contextInfo:@"This is the context info."
+    ];
+
+}

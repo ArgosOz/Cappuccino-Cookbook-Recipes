@@ -18,8 +18,6 @@
 @import <MBSteps/StepsWindowController.j>
 
 
-var GITHUB_REPO = 0
-
 @implementation AppController : CPObject
 {
     @outlet CPWindow            theWindow;
@@ -89,10 +87,13 @@ var GITHUB_REPO = 0
 	[_tableView reloadData];
 
     _stepsWindowController = [StepsWindowController alloc];
-    [_stepsWindowController setPathPrefix:@"../../"];
+    /* [_stepsWindowController setPathPrefix:@"../../"]; */
     [_stepsWindowController initWithWindowCibPath:@"../../Frameworks/MBSteps/Resources/StepsWindow.cib" owner:_stepsWindowController];
     [_stepsWindowController showWindow:self];
 
+    var currentFrameSize = [[_stepsWindowController window] frame].size;
+    var newHeight = ([[_stepsWindowController tableView] rowHeight] * 11) * 1.2;
+    [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, newHeight)];
 }
 
 
@@ -123,11 +124,93 @@ var GITHUB_REPO = 0
 
 - (IBAction) openLinkInNewTab:(id)sender
 {
+    var GITHUB_REPO = 0;
+    var CLASS_REFERENCE = 1;
+    var DASH = 999;
+    // ----------------------
+    var CPTableViewGroupRows = 2;
+    var BorderTableTest = 3;
+    var ColumnResize = 4;
+    var ColumnSizing2 = 5;
+    var DataView = 6;
+    var DelegateSelectionTest = 7;
+    var DragAndDrop = 8;
+    var Editing = 9;
+    var EditingControls = 10;
+    var GroupRowTest = 11;
+    var HeaderCornerView = 12;
+    var OldTest = 13;
+    var TableBindings = 14;
+    var TableCibTest = 15;
+    var TestTableColumn = 16;
+    var VariableRows = 17;
+    var ViewBasedCib = 18;
+    var url;
+    var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            window.open("https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Basic-CPTableView", "_blank");
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Basic-CPTableView";
+            break;
+        case CLASS_REFERENCE:
+            url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_table_view.html";
+            break;
+        case DASH:
+            url = "dash://cappuccino:CPTableView";
+            openNewTab = "_self";
+            break;
+        case CPTableViewGroupRows:
+            url = "https://cappuccino-testbook.5apps.com/?t=CPTableViewGroupRows";
+            break;
+        case BorderTableTest:
+            url = "https://cappuccino-testbook.5apps.com/?t=BorderTableTest";
+            break;
+        case ColumnResize:
+            url = "https://cappuccino-testbook.5apps.com/?t=ColumnResize";
+            break;
+        case ColumnSizing2:
+            url = "https://cappuccino-testbook.5apps.com/?t=ColumnSizing2";
+            break;
+        case DataView:
+            url = "https://cappuccino-testbook.5apps.com/?t=DataView";
+            break;
+        case DelegateSelectionTest:
+            url = "https://cappuccino-testbook.5apps.com/?t=DelegateSelectionTest";
+            break;
+        case DragAndDrop:
+            url = "https://cappuccino-testbook.5apps.com/?t=DragAndDrop";
+            break;
+        case Editing:
+            url = "https://cappuccino-testbook.5apps.com/?t=Editing";
+            break;
+        case EditingControls:
+            url = "https://cappuccino-testbook.5apps.com/?t=EditingControls";
+            break;
+        case GroupRowTest:
+            url = "https://cappuccino-testbook.5apps.com/?t=GroupRowTest";
+            break;
+        case HeaderCornerView:
+            url = "https://cappuccino-testbook.5apps.com/?t=HeaderCornerView";
+            break;
+        case OldTest:
+            url = "https://cappuccino-testbook.5apps.com/?t=OldTest";
+            break;
+        case TableBindings:
+            url = "https://cappuccino-testbook.5apps.com/?t=TableBindings";
+            break;
+        case TableCibTest:
+            url = "https://cappuccino-testbook.5apps.com/?t=TableCibTest";
+            break;
+        case TestTableColumn:
+            url = "https://cappuccino-testbook.5apps.com/?t=TestTableColumn";
+            break;
+        case VariableRows:
+            url = "https://cappuccino-testbook.5apps.com/?t=VariableRows";
+            break;
+        case ViewBasedCib:
+            url = "https://cappuccino-testbook.5apps.com/?t=ViewBasedCib";
             break;
     }
+    window.open(url, openNewTab);
 }
 
 // ┌───────────────────────────────────────────────────────┐

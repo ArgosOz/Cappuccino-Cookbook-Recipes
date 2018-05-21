@@ -11,8 +11,6 @@
 
 @import <MBSteps/StepsWindowController.j>
 
-var GITHUB_REPO = 0;
-
 @implementation AppController : CPObject
 {
     @outlet CPWindow            theWindow;
@@ -23,7 +21,7 @@ var GITHUB_REPO = 0;
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
 {
     _stepsWindowController = [StepsWindowController alloc];
-    [_stepsWindowController setPathPrefix:@"../../"];
+    // [_stepsWindowController setPathPrefix:@"../../"];
 
     [_stepsWindowController initWithWindowCibPath:@"../../Frameworks/MBSteps/Resources/StepsWindow.cib" owner:_stepsWindowController];
     [_stepsWindowController showWindow:self];
@@ -57,11 +55,29 @@ var GITHUB_REPO = 0;
 
 - (IBAction) openLinkInNewTab:(id)sender
 {
+    var GITHUB_REPO = 0;
+    var CLASS_REFERENCE = 1;
+    var DASH = 999;
+    
+    var TEST_APP = 2;
+    var url;
+    var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            window.open("https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPSplitView-Basics", "_blank");
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPSplitView-Basics";
+            break;
+        case CLASS_REFERENCE:
+            url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_split_view.html";
+            break;
+        case DASH:
+            url = "dash://cappuccino:CPSplitView";
+            openNewTab = "_self";
+            break;
+        case TEST_APP:
+            url = "https://cappuccino-testbook.5apps.com/?t=CPSplitViewTest";
             break;
     }
+    window.open(url, openNewTab);
 }
 
 

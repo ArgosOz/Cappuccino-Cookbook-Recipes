@@ -18,7 +18,7 @@ var ENV = require("system").env,
 
 app (projectName, function(task)
 {
-    ENV["OBJJ_INCLUDE_PATHS"] = "Frameworks";
+    ENV["OBJJ_INCLUDE_PATHS"] = "../../Frameworks";
 
     if (configuration === "Debug")
         ENV["OBJJ_INCLUDE_PATHS"] = FILE.join(ENV["OBJJ_INCLUDE_PATHS"], configuration);

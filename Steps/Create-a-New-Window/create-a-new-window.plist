@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Go to bottom right side of the Xcode window...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Drag and drop a &quot;Window&quot;</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>width</key>
+		<integer>540</integer>
+		<key>height</key>
+		<integer>353</integer>
+		<key>imageName</key>
+		<string>100.gif</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string> </string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Go to upper right side of the Xcode window...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Click on &quot;Show the Attributes inspector&quot; button...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Rename &quot;Title&quot; to &quot;NewWindow&quot;</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>width</key>
+		<integer>540</integer>
+		<key>height</key>
+		<integer>312</integer>
+		<key>imageName</key>
+		<string>105.gif</string>
+	</dict>
+</array>
+</plist>

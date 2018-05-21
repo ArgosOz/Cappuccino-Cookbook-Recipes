@@ -131,6 +131,121 @@
                                     <action selector="openLinkInNewTab:" target="450" id="zcX-XB-Ain"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Class Reference..." tag="1" keyEquivalent="C" id="dLE-G0-0Rd">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="i5O-iO-bjo"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="u2d-se-bze">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="mlq-nZ-Fca"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="3IO-EB-iVN"/>
+                            <menuItem title="CPTableViewGroupRows" tag="2" id="PmO-GQ-xwo">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="oGw-jX-Jco"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="BorderTableTest" tag="3" id="sWk-hZ-Wp9">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="GU8-Wb-gT3"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="ColumnResize" tag="4" id="uGe-Rm-Cl3">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="xSw-bq-G9C"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="ColumnSizing2" tag="5" id="NN4-8z-9TX">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="jZd-dU-dav"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="DataView" tag="6" id="IUS-uh-z7P">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="guH-Xf-SZG"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="DelegateSelectionTest" tag="7" id="jPG-Nc-6ky">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="fZT-ZQ-HUY"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="DragAndDrop" tag="8" id="qca-NW-N9I">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="SXy-S9-KbD"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Editing" tag="9" id="fSp-q7-009">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="1Uu-oJ-WET"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="EditingControls" tag="10" id="fkL-il-qyh">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="OcH-kg-kTJ"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="GroupRowTest" tag="11" id="rmQ-Cv-izo">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="R6f-5v-2la"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="HeaderCornerView" tag="12" id="3Kn-eO-wje">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="6tj-jM-Ji6"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="OldTest" tag="13" id="vzA-3e-0UY">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="ovG-Oa-GhX"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="TableBindings" tag="14" id="wEp-CR-w8Y">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="u4r-be-B5S"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="TableCibTest" tag="15" id="Sdj-SD-7JC">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="jFw-Tz-xwC"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="TestTableColumn" tag="16" id="uMN-Te-Mmz">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="eWA-Zc-ofN"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="VariableRows" tag="17" id="9aT-Eb-OKd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="WwK-Ce-cYK"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="ViewBasedCib" tag="17" id="a9l-xy-Hr8">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="r2C-tV-RNg"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>

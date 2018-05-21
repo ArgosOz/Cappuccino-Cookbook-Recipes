@@ -1,0 +1,6 @@
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+    @outlet CPOutlineView       _outlineView;
+            CPMutableDictionary _outlineViewData;
+}

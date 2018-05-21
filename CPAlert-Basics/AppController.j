@@ -99,7 +99,7 @@
     var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Cell-Based-CPOutlineView";
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPAlert-Basics";
             break;
         case CLASS_REFERENCE:
             url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_outline_view.html";

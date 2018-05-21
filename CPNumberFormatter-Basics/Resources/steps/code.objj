@@ -1,0 +1,40 @@
+var formatter = [[CPNumberFormatter alloc] init];
+
+var number = [CPNumber numberWithDouble:1234.99];
+
+[formatter setNumberStyle:CPNumberFormatterDecimalStyle];
+console.info(@"Decimal Style    : %s", 
+		[formatter stringFromNumber:number]
+	);
+
+
+number = [CPNumber numberWithDouble:.2];
+
+[formatter setNumberStyle:CPNumberFormatterPercentStyle];
+console.info(@"Percent Style    : %s", 
+		[formatter stringFromNumber:number]
+	);
+
+
+number = [CPNumber numberWithDouble:200.95];
+
+[formatter setNumberStyle:CPNumberFormatterCurrencyStyle];
+console.info(@"Currency Style   : %s", 
+		[formatter stringFromNumber:number]
+	);
+
+
+number = [CPNumber numberWithDouble:200.95];
+
+[formatter setNumberStyle:CPNumberFormatterScientificStyle];
+console.info(@"Scientific Style : %s", 
+		[formatter stringFromNumber:number]
+	);
+
+
+number = [CPNumber numberWithDouble:200.95];
+
+[formatter setNumberStyle:CPNumberFormatterSpellOutStyle];
+console.info(@"Spelled Out Style: %s", 
+		[formatter stringFromNumber:number]
+	);

@@ -1,0 +1,112 @@
+@implementation MyView : CPView
+{
+    CPImage     _leftImage;
+    CPImage     _middleImage;
+    CPImage     _rightImage;
+}
+
+// Initialize a new CPView object using a rectangle.
+// Load 3 images.
+// Since image loading is asynchronous we need to set delegates 
+// and receive imageDidLoad: messages here.
+- (id) initWithFrame:(CGRect)aFrame
+{
+
+    self =[super initWithFrame:aFrame];
+
+    _leftImage = [[CPImage alloc] 
+                    initWithContentsOfFile:@"Resources/left.png"];
+
+    _middleImage = [[CPImage alloc] 
+                    initWithContentsOfFile:@"Resources/middle.png"];
+
+    _rightImage = [[CPImage alloc] 
+                    initWithContentsOfFile:@"Resources/right.png"];
+
+    [_leftImage setDelegate:self];
+    [_middleImage setDelegate:self];
+    [_rightImage setDelegate:self];
+
+    return self;
+}
+
+// This is where we reveive imageDidLoad messages.
+// then we call setNeedsDisplay: to notify Cappuccino runtime 
+// that contents of our view need to be redrawn.
+// setNeedsDisplay: makes a note of the redraw request 
+// and returns immediately. Subsequently Cappuccino will call 
+// drawRect: method when it's appropriate.
+- (void)imageDidLoad:(CPImage)anImage
+{
+    [self setNeedsDisplay:YES];
+}
+
+
+// Here we tell Cappuccino what to draw and how...
+// First we draw a bezier path around the frame rectangle.
+// Then we place 3 images on it.
+- (void) drawRect:(CGRect)dirtyRect{
+    
+    // Draw a rounded rectangle
+    var bezierPath = [CPBezierPath 
+            bezierPathWithRoundedRect:
+                [self bounds] xRadius:8.0 yRadius:8.0];
+
+    [[CPColor whiteColor] setFill];
+    [CPBezierPath fillRect:[self bounds]];
+
+    [[CPColor grayColor] setStroke];
+    [bezierPath stroke];
+
+
+
+    // Get the drawing context for the images...
+    var context = [[CPGraphicsContext currentContext] graphicsPort];
+
+
+
+    // Draw _leftImage
+    // Begin with creating a rectangle to put the image in...
+    var aRect = CGRectMake(
+        0, // x
+        0, // y
+        [_leftImage size].width, // width
+        [_leftImage size].height // height
+    );
+    // Place the image in the rectangle
+    CGContextDrawImage(context, aRect, _leftImage);
+
+
+
+    // Draw _middleImage
+    // _middleImage will tile along the rectangle.
+    // Sum of left and right image widths...
+    var sumOfWidths = 
+        [_leftImage size].width + [_rightImage size].width;
+    // Create a rectangle...
+    aRect = CGRectMake(
+        [_leftImage size].width, // x
+        0, // y
+        [self bounds].size.width - sumOfWidths, // width
+        [_leftImage size].height // height
+    );
+    // Tile _middleImage
+    var aFillColor = [CPColor colorWithPatternImage:_middleImage];
+    CGContextSetFillColor(context, aFillColor);
+    CGContextFillRect(context, aRect);
+
+
+
+    // Draw _rightImage
+    var x = [self bounds].size.width - [_rightImage size].width;
+    aRect = CGRectMake(
+        x, 
+        0, // y
+        [_rightImage size].width, // width
+        [_rightImage size].height); // height
+
+    CGContextDrawImage(context, aRect, _rightImage);
+
+}
+
+@end

@@ -1,0 +1,37 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+// We import the class we've created
+// in the previous step.
+@import "MyView.j"
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow    theWindow;
+}
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{
+    // We're going to draw our MyView object
+    // in this rectangle...
+    var aFrame = CGRectMake(
+                            10.0, // x
+                            10.0, // y
+                            285.0, // width
+                            160.0 // height
+                            );
+
+    // Init myView 
+    // by passing the rectangle we've just created above...
+    var myView = [[MyView alloc] initWithFrame:aFrame];
+
+    // Add the newly created view to theWindow
+    [[theWindow contentView] addSubview:myView];
+}
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

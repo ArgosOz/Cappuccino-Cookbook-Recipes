@@ -11,6 +11,8 @@
 
 @import <MBSteps/StepsWindowController.j>
 
+@import "MyView.j"
+
 @implementation AppController : CPObject
 {
     @outlet CPWindow            theWindow;
@@ -29,6 +31,21 @@
     var currentFrameSize = [[_stepsWindowController window] frame].size;
     [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, 263)];
 
+    console.info("\n\n");
+    console.info("Download the images below and place them in your project's Resources folder.");
+    console.info("1.");
+    console.info([[CPBundle mainBundle] pathForResource:@"left.png"]);
+    console.info("2.");
+    console.info([[CPBundle mainBundle] pathForResource:@"middle.png"]);
+    console.info("3.");
+    console.info([[CPBundle mainBundle] pathForResource:@"right.png"]);
+    console.info("\n\n");
+
+
+    var aFrame = CGRectMake(10.0, 10.0, 285.0, 160.0);
+
+    var myView = [[MyView alloc] initWithFrame:aFrame];
+    [[theWindow contentView] addSubview:myView];
 
 }
 
@@ -53,17 +70,17 @@
     var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Drawing-in-CPImage";
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Drawing-in-CPView";
             break;
         case CLASS_REFERENCE:
-            url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_outline_view.html";
+            url = "http://www.cappuccino-project.org/learn/documentation/class_c_p_view.html";
             break;
         case DASH:
-            url = "dash://cappuccino:CPAlert";
+            url = "dash://cappuccino:CPView";
             openNewTab = "_self";
             break;
         case TEST_APP1:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPAlertTest";
+            url = "https://cappuccino-testbook.5apps.com/?t=CPViewController";
             break;
     }
     window.open(url, openNewTab);

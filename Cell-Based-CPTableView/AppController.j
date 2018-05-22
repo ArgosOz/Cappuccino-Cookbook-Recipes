@@ -87,7 +87,7 @@
 	[_tableView reloadData];
 
     _stepsWindowController = [StepsWindowController alloc];
-    /* [_stepsWindowController setPathPrefix:@"../../"]; */
+    [_stepsWindowController setPathPrefix:@"../../"];
     [_stepsWindowController initWithWindowCibPath:@"../../Frameworks/MBSteps/Resources/StepsWindow.cib" owner:_stepsWindowController];
     [_stepsWindowController showWindow:self];
 

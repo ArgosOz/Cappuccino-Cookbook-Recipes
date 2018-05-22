@@ -24,33 +24,13 @@
 	</dict>
 	<dict>
 		<key>step</key>
-		<string>Create a Cell Based Outline View...</string>
+		<string>Create two Image Views...</string>
 		<key>timestamp</key>
 		<real>1526499224</real>
 		<key>baseURL</key>
-		<string>../Steps/Create-a-Cell-Based-Outline-View/</string>
+		<string>../Steps/Create-an-Image-View/</string>
 		<key>subStepsFileName</key>
-		<string>create-a-cell-based-outline-view.plist</string>
-	</dict>
-	<dict>
-		<key>step</key>
-		<string>Set &quot;Autoresizing&quot; for the Outline View...</string>
-		<key>timestamp</key>
-		<real>1526499225</real>
-		<key>baseURL</key>
-		<string>../Steps/Set-Autoresizing-for-Outline-View/</string>
-		<key>subStepsFileName</key>
-		<string>set-autoresizing-for-outline-view.plist</string>
-	</dict>
-	<dict>
-		<key>step</key>
-		<string>Set Outline View data source...</string>
-		<key>timestamp</key>
-		<real>1526499228</real>
-		<key>baseURL</key>
-		<string>../Steps/Set-Outline-View-Data-Source/</string>
-		<key>subStepsFileName</key>
-		<string>set-outline-view-data-source.plist</string>
+		<string>create-an-image-view.plist</string>
 	</dict>
 	<dict>
 		<key>step</key>
@@ -64,7 +44,7 @@
 	</dict>
 	<dict>
 		<key>step</key>
-		<string>Connect the outlet to the Outline View...</string>
+		<string>Connect the outlets to the Image Views...</string>
 		<key>timestamp</key>
 		<real>1526499230</real>
 		<key>baseURL</key>
@@ -81,7 +61,13 @@
 				<key>type</key>
 				<integer>0</integer>
 				<key>content</key>
-				<string>Connect _outlineView outlet to &quot;Outline View.&quot; After that, we&apos;ll be able to use the &quot;Outline View&quot; in our code...</string>
+				<string>Connect outlets to &quot;Image Views&quot;</string>
+			</dict>
+			<dict>
+				<key>type</key>
+				<integer>0</integer>
+				<key>content</key>
+				<string>After that, we&apos;ll be able to use the &quot;Image Views&quot; in our code...</string>
 			</dict>
 			<dict>
 				<key>type</key>
@@ -89,9 +75,9 @@
 				<key>width</key>
 				<integer>540</integer>
 				<key>height</key>
-				<integer>330</integer>
+				<integer>333</integer>
 				<key>imageName</key>
-				<string>235.gif</string>
+				<string>100.gif</string>
 			</dict>
 			<dict>
 				<key>type</key>
@@ -103,23 +89,13 @@
 	</dict>
 	<dict>
 		<key>step</key>
-		<string>Create data for the Outline View...</string>
+		<string>Write the code...</string>
 		<key>timestamp</key>
 		<real>1526499231</real>
 		<key>baseURL</key>
 		<string>Resources/steps/</string>
 		<key>subStepsFileName</key>
-		<string>create-the-outline-view-data.plist</string>
-	</dict>
-	<dict>
-		<key>step</key>
-		<string>Implement data source protocol methods...</string>
-		<key>timestamp</key>
-		<real>1526499232</real>
-		<key>baseURL</key>
-		<string>Resources/steps/</string>
-		<key>subStepsFileName</key>
-		<string>data-source-protocol-methods.plist</string>
+		<string>write-the-code.plist</string>
 	</dict>
 </array>
 </plist>

@@ -1,8 +1,8 @@
 /*
  * AppController.j
- * CPImageView-Basics
+ * CPUserDefaults-Basics
  *
- * Created by Argos Oz on May 21, 2018.
+ * Created by Argos Oz on May 22, 2018.
  * Copyright 2018, Army of Me, Inc. All rights reserved.
  */
 
@@ -11,12 +11,10 @@
 
 @import <MBSteps/StepsWindowController.j>
 
+
 @implementation AppController : CPObject
 {
-    @outlet CPWindow            theWindow;
-    @outlet CPImageView         _imageView1;
-    @outlet CPImageView         _imageView2;
-            CPWindowController  _stepsWindowController;
+    @outlet CPWindow    theWindow;
 }
 
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
@@ -28,27 +26,6 @@
 
     var currentFrameSize = [[_stepsWindowController window] frame].size;
     [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, 297)];
-
-
-    // Direct way
-    var image = [[CPImage alloc] initWithContentsOfFile:@"Resources/ireland-1985088__340.jpg"];
-    [_imageView1 setFrameSize:CGSizeMake(401,340)];
-    [_imageView1 setImage:image];
-    [_imageView1 setImageScaling:CPImageScaleNone];
-    [_imageView1 setImageAlignment:CPImageAlignCenter];
-
-    // Bundle way
-    image = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:"nature-1898150__340.jpg"]];
-    
-    var targetX = [_imageView1 frameOrigin].x;
-    var targetY = [_imageView1 frameOrigin].y + [_imageView1 frameSize].height + 27;
-
-    [_imageView2 setFrameOrigin:CGPointMake(targetX, targetY)];
-    [_imageView2 setFrameSize:CGSizeMake(401,340)];
-    [_imageView2 setImage:image];
-    [_imageView2 setImageScaling:CPImageScaleAxesIndependently];
-    [_imageView2 setImageAlignment:CPImageAlignCenter];
-
 }
 
 - (void)awakeFromCib

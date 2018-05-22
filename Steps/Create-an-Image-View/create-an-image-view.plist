@@ -6,21 +6,23 @@
 		<key>type</key>
 		<integer>0</integer>
 		<key>content</key>
-		<string>Copy the code below...</string>
+		<string>Go to bottom right side of the Xcode window...</string>
 	</dict>
 	<dict>
 		<key>type</key>
 		<integer>0</integer>
 		<key>content</key>
-		<string>Paste it into applicationDidFinishLaunching: method in AppController.j file...</string>
+		<string>Drag and drop an &quot;Image View&quot;</string>
 	</dict>
 	<dict>
 		<key>type</key>
-		<integer>2</integer>
-		<key>language</key>
-		<string>objc</string>
-		<key>codeFileURL</key>
-		<string>Resources/steps/steps-outline-view-data.objj</string>
+		<integer>1</integer>
+		<key>width</key>
+		<integer>540</integer>
+		<key>height</key>
+		<integer>356</integer>
+		<key>imageName</key>
+		<string>105.gif</string>
 	</dict>
 </array>
 </plist>

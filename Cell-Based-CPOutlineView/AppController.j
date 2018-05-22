@@ -22,7 +22,7 @@
 - (void) applicationDidFinishLaunching:(CPNotification)aNotification
 {
     _stepsWindowController = [StepsWindowController alloc];
-    /* [_stepsWindowController setPathPrefix:@"../../"]; */
+    [_stepsWindowController setPathPrefix:@"../../"];
     [_stepsWindowController initWithWindowCibPath:@"../../Frameworks/MBSteps/Resources/StepsWindow.cib" owner:_stepsWindowController];
     var currentFrameSize = [[_stepsWindowController window] frame].size;
     [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, 288)];

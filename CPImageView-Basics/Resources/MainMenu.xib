@@ -81,30 +81,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <slider verticalHuggingPriority="750" id="452">
-                        <rect key="frame" x="192" y="143" width="96" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="453">
-                            <font key="font" size="12" name="Helvetica"/>
-                        </sliderCell>
-                        <connections>
-                            <action selector="takeDoubleValueFrom:" target="456" id="458"/>
-                        </connections>
-                    </slider>
-                    <textField verticalHuggingPriority="750" id="456">
-                        <rect key="frame" x="192" y="191" width="96" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="457">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="qNu-z1-hPN">
+                        <rect key="frame" x="20" y="120" width="185" height="220"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="s49-m6-G3Z"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="Nvq-No-DSO">
+                        <rect key="frame" x="243" y="66" width="204" height="274"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="H82-cW-Jvw"/>
+                    </imageView>
                 </subviews>
             </view>
         </window>
         <customObject id="450" customClass="AppController">
             <connections>
+                <outlet property="_imageView1" destination="qNu-z1-hPN" id="ndZ-8T-NTZ"/>
+                <outlet property="_imageView2" destination="Nvq-No-DSO" id="OXB-bw-hRm"/>
                 <outlet property="theWindow" destination="371" id="459"/>
             </connections>
         </customObject>

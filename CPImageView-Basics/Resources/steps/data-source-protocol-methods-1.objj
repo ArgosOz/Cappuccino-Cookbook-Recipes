@@ -1,9 +1,0 @@
-- (CPInteger) outlineView             :(CPOutlineView)outlineView 
-              numberOfChildrenOfItem  :(id)item
-{
-    if(item == nil){
-        return [_outlineViewData count];
-    }
-
-    return [item count];
-}

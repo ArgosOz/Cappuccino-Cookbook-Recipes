@@ -6,13 +6,13 @@
 		<key>type</key>
 		<integer>0</integer>
 		<key>content</key>
-		<string>We&apos;ll store our Outline View data in the _outlineDataArray variable...</string>
+		<string>We need outlets to reference objects created in the Xcode Interface Builder.</string>
 	</dict>
 	<dict>
 		<key>type</key>
 		<integer>0</integer>
 		<key>content</key>
-		<string>We need outlets to reference objects created in the Xcode Interface Builder. In this case it is a CPOutlineView outlet...</string>
+		<string>In this case we need two CPImageView outlets...</string>
 	</dict>
 	<dict>
 		<key>type</key>

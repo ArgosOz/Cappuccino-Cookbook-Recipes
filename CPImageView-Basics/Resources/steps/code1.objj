@@ -1,0 +1,8 @@
+// Direct way
+var image = [[CPImage alloc] 
+     initWithContentsOfFile:@"Resources/ireland-1985088__340.jpg"
+   ];
+[_imageView1 setFrameSize:CGSizeMake(401,340)];
+[_imageView1 setImage:image];
+[_imageView1 setImageScaling:CPImageScaleNone];
+[_imageView1 setImageAlignment:CPImageAlignCenter];

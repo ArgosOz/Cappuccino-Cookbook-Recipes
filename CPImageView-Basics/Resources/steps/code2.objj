@@ -1,0 +1,19 @@
+// Bundle way
+image = [[CPImage alloc] 
+    initWithContentsOfFile:[
+            [CPBundle mainBundle] 
+			    pathForResource:"nature-1898150__340.jpg"
+        ]
+    ];
+
+var targetX = [_imageView1 frameOrigin].x;
+
+var targetY = 
+    [_imageView1 frameOrigin].y + 
+    [_imageView1 frameSize].height + 27;
+
+[_imageView2 setFrameOrigin:CGPointMake(targetX, targetY)];
+[_imageView2 setFrameSize:CGSizeMake(401,340)];
+[_imageView2 setImage:image];
+[_imageView2 setImageScaling:CPImageScaleAxesIndependently];
+[_imageView2 setImageAlignment:CPImageAlignCenter];

@@ -1,6 +1,6 @@
 /*
  * AppController.j
- * CPUserDefaults-Basics
+ * Drawing-in-CPImage
  *
  * Created by Argos Oz on May 22, 2018.
  * Copyright 2018, Army of Me, Inc. All rights reserved.
@@ -11,7 +11,6 @@
 
 @import <MBSteps/StepsWindowController.j>
 
-
 @implementation AppController : CPObject
 {
     @outlet CPWindow            theWindow;
@@ -21,30 +20,16 @@
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
 {
     _stepsWindowController = [StepsWindowController alloc];
+    
     [_stepsWindowController setPathPrefix:@"../../"];
+
     [_stepsWindowController initWithWindowCibPath:@"../../Frameworks/MBSteps/Resources/StepsWindow.cib" owner:_stepsWindowController];
     [_stepsWindowController showWindow:self];
 
     var currentFrameSize = [[_stepsWindowController window] frame].size;
-    [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, 297)];
+    [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, 263)];
 
-    
-    var defaults = [CPUserDefaults standardUserDefaults];
 
-    console.info("\n\n");
-    if([defaults objectForKey:@"Marvel"]){
-        console.info("Found a Marvel superhero: %s", [defaults objectForKey:@"Marvel"]);
-    } else {
-        console.info("Did not find any Marvel superheroes. Created a new one...");
-    }
-
-    var count = [defaults integerForKey:@"Count"];
-    console.info("Current count for Marvel is %d", count);
-    console.info("\n\n");
-    count++;
-
-    [defaults setInteger:count forKey:@"Count"];
-    [defaults setObject:@"Spider-Man" forKey:@"Marvel"];
 }
 
 - (void)awakeFromCib
@@ -61,34 +46,25 @@
 {
     var GITHUB_REPO = 0;
     var CLASS_REFERENCE = 1;
-
-    /* var TEST_APP1 = 2; */
-    /* var TEST_APP2 = 3; */
-    /* var TEST_APP3 = 4; */
+    var TEST_APP1 = 2;
 
     var DASH = 999;
     var url;
     var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPUserDefaults-Basics";
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPAlert-Basics";
             break;
         case CLASS_REFERENCE:
-            url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_user_defaults.html";
+            url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_outline_view.html";
             break;
         case DASH:
-            url = "dash://cappuccino:CPUserDefaults";
+            url = "dash://cappuccino:CPAlert";
             openNewTab = "_self";
             break;
-        /* case TEST_APP1: */
-        /*     url = "https://cappuccino-testbook.5apps.com/?t=CPImageViewTest"; */
-        /*     break; */
-        /* case TEST_APP2: */
-        /*     url = "https://cappuccino-testbook.5apps.com/?t=CPImageViewbindingsTest"; */
-        /*     break; */
-        /* case TEST_APP3: */
-        /*     url = "https://cappuccino-testbook.5apps.com/?t=CPImageViewAlignmentScaling"; */
-        /*     break; */
+        case TEST_APP1:
+            url = "https://cappuccino-testbook.5apps.com/?t=CPAlertTest";
+            break;
     }
     window.open(url, openNewTab);
 }

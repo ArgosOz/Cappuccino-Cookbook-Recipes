@@ -1,0 +1,16 @@
+var defaults = [CPUserDefaults standardUserDefaults];
+
+if([defaults objectForKey:@"Marvel"]){
+    console.info("Found a Marvel superhero: %s", 
+    	[defaults objectForKey:@"Marvel"]);
+} else {
+    console.info("Did not find any Marvel superheroes. 
+    	Created a new one...");
+}
+
+var count = [defaults integerForKey:@"Count"];
+console.info("Current count for Marvel is %d", count);
+count++;
+
+[defaults setInteger:count forKey:@"Count"];
+[defaults setObject:@"Spider-Man" forKey:@"Marvel"];

@@ -1,6 +1,6 @@
 /*
  * AppController.j
- * Drawing-in-CPImage
+ * Drawing-in-CPView
  *
  * Created by Argos Oz on May 22, 2018.
  * Copyright 2018, Army of Me, Inc. All rights reserved.

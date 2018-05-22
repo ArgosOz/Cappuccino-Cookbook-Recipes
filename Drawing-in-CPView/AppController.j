@@ -1,6 +1,6 @@
 /*
  * AppController.j
- * Drawing-in-CPImage
+ * Drawing-in-CPView
  *
  * Created by Argos Oz on May 22, 2018.
  * Copyright 2018, Army of Me, Inc. All rights reserved.
@@ -53,7 +53,7 @@
     var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPAlert-Basics";
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Drawing-in-CPImage";
             break;
         case CLASS_REFERENCE:
             url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_outline_view.html";

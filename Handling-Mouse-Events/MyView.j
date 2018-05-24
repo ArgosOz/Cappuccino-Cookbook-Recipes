@@ -1,8 +1,18 @@
+@import <AppKit/CPView.j>
+@import <AppKit/CPBezierPath.j>
+@import <AppKit/CPAlert.j>
+/*
+We'll override the mouseDown: method.
+In order to handle the mouse entered and mouse exited events...
+We'll use the bounds of our view as a tracking rectangle.
+*/
 @implementation MyView : CPView
 {
     CPImage     _leftImage;
     CPImage     _middleImage;
     CPImage     _rightImage;
+
+    CPColor     _fillColor;
 }
 
 // Initialize a new CPView object using a rectangle.
@@ -13,6 +23,8 @@
 {
 
     self =[super initWithFrame:aFrame];
+
+    _fillColor = [CPColor whiteColor];
 
     _leftImage = [[CPImage alloc] 
                     initWithContentsOfFile:@"Resources/left.png"];
@@ -26,6 +38,25 @@
     [_leftImage setDelegate:self];
     [_middleImage setDelegate:self];
     [_rightImage setDelegate:self];
+
+    // We need to remove default tracking area.
+    [self removeAllTrackingAreas];
+    // And create a new one...
+    // We're going to set the options we need.
+    // For more information see 
+    // http://www.cappuccino-project.org/learn/documentation/_c_p_tracking_area_8j.html
+    var trackingArea = [[CPTrackingArea alloc] 
+                        initWithRect:CGRectMakeZero() 
+                        options:
+                            CPTrackingMouseMoved | 
+                            CPTrackingActiveAlways | 
+                            CPTrackingInVisibleRect | 
+                            CPTrackingMouseEnteredAndExited 
+                        owner:self 
+                        userInfo:nil
+                        ];
+
+    [self addTrackingArea:trackingArea];
 
     return self;
 }
@@ -41,6 +72,28 @@
     [self setNeedsDisplay:YES];
 }
 
+- (void) mouseDown:(CPEvent)theEvent {
+    var anAlert= [CPAlert 
+        alertWithMessageText:@"Received mouse down event in MyView."
+        defaultButton:@"OK"
+        alternateButton:nil
+        otherButton:nil
+        informativeTextWithFormat:@"Mouse Down"];
+     
+    [anAlert runModal];
+}
+
+-(void)mouseEntered:(CPEvent)theEvent 
+{
+    _fillColor = [CPColor grayColor];
+    [self setNeedsDisplay:YES];
+}
+
+-(void)mouseExited:(CPEvent)theEvent 
+{    
+    _fillColor = [CPColor whiteColor];
+    [self setNeedsDisplay:YES];
+}
 
 // Here we tell Cappuccino what to draw and how...
 // First we draw a bezier path around the frame rectangle.
@@ -52,7 +105,7 @@
             bezierPathWithRoundedRect:
                 [self bounds] xRadius:8.0 yRadius:8.0];
 
-    [[CPColor whiteColor] setFill];
+    [_fillColor setFill];
     [CPBezierPath fillRect:[self bounds]];
 
     [[CPColor grayColor] setStroke];

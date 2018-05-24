@@ -1,5 +1,10 @@
+@import <AppKit/CPView.j>
+@import <AppKit/CPBezierPath.j>
+
+
 @implementation MyView : CPView
 {
+
     CPImage     _leftImage;
     CPImage     _middleImage;
     CPImage     _rightImage;
@@ -7,9 +12,7 @@
 
 - (void) drawRect:(CGRect)dirtyRect{
     
-    var bezierPath = [CPBezierPath 
-        bezierPathWithRoundedRect:
-            [self bounds] xRadius:8.0 yRadius:8.0];
+    var bezierPath = [CPBezierPath bezierPathWithRoundedRect:[self bounds] xRadius:8.0 yRadius:8.0];
 
     [[CPColor whiteColor] setFill];
     [CPBezierPath fillRect:[self bounds]];
@@ -39,6 +42,7 @@
 }
 
 
+
 - (id) initWithFrame:(CGRect)aFrame
 {
 
@@ -51,8 +55,20 @@
     [_leftImage setDelegate:self];
     [_middleImage setDelegate:self];
     [_rightImage setDelegate:self];
+    /* _rootLayer = [CALayer layer]; */
+
+    /* [self setWantsLayer:YES]; */
+    /* [self setLayer:_rootLayer]; */
+
+    /* [_rootLayer setBackgroundColor:[CPColor blackColor]]; */
+
+    /* _myLayer = [MyLayer alloc] initWithMyView */
+
+    /* [_rootLayer setNeedsDisplay]; */
 
     return self;
 }
+
+
 
 @end

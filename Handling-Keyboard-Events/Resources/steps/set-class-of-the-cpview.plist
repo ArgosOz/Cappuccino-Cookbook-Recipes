@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Go to upper right side of the Xcode window...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Click on &quot;Show the Identity inspector&quot; button...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Set &quot;Class&quot; property to &quot;MyView&quot;</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>width</key>
+		<integer>540</integer>
+		<key>height</key>
+		<integer>265</integer>
+		<key>imageName</key>
+		<string>110.gif</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string> </string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>When you run the program...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Cappuccino will automatically instantiate MyView and place it inside the Custom View frame by calling MyView&apos;s initWithFrame: method.</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>That&apos;s it.</string>
+	</dict>
+</array>
+</plist>

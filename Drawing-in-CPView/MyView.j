@@ -1,6 +1,4 @@
-/* @import <Foundation/Foundation.j> */
 @import <AppKit/CPView.j>
-
 
 @implementation MyView : CPView
 {

@@ -2,4 +2,3 @@
 // We import the class we've created
 // in the previous step.
 @import "MyView.j"
-

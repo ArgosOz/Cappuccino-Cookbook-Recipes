@@ -1,8 +1,8 @@
 /*
  * AppController.j
- * Drawing-in-CPView
+ * Handling-Mouse-Events
  *
- * Created by Argos Oz on May 22, 2018.
+ * Created by Argos Oz on May 23, 2018.
  * Copyright 2018, Army of Me, Inc. All rights reserved.
  */
 
@@ -13,6 +13,7 @@
 
 @import "MyView.j"
 
+
 @implementation AppController : CPObject
 {
     @outlet CPWindow            theWindow;
@@ -22,14 +23,16 @@
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
 {
     _stepsWindowController = [StepsWindowController alloc];
-    
+
     [_stepsWindowController setPathPrefix:@"../../"];
 
     [_stepsWindowController initWithWindowCibPath:@"../../Frameworks/MBSteps/Resources/StepsWindow.cib" owner:_stepsWindowController];
     [_stepsWindowController showWindow:self];
 
     var currentFrameSize = [[_stepsWindowController window] frame].size;
-    [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, 263)];
+    var newHeight = ([[_stepsWindowController tableView] rowHeight] * 7) + 54;
+    [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, newHeight)];
+
 
     console.info("\n\n");
     console.info("Download the images below and place them in your project's Resources folder.");
@@ -40,13 +43,6 @@
     console.info("3. right.png");
     console.info([[CPBundle mainBundle] pathForResource:@"right.png"]);
     console.info("\n\n");
-
-
-    var aFrame = CGRectMake(10.0, 10.0, 285.0, 160.0);
-
-    var myView = [[MyView alloc] initWithFrame:aFrame];
-    [[theWindow contentView] addSubview:myView];
-
 }
 
 - (void)awakeFromCib
@@ -63,7 +59,9 @@
 {
     var GITHUB_REPO = 0;
     var CLASS_REFERENCE = 1;
+
     var TEST_APP1 = 2;
+
 
     var DASH = 999;
     var url;
@@ -73,14 +71,14 @@
             url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Drawing-in-CPView";
             break;
         case CLASS_REFERENCE:
-            url = "http://www.cappuccino-project.org/learn/documentation/class_c_p_view.html";
+            url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_tracking_area.html";
             break;
         case DASH:
-            url = "dash://cappuccino:CPView";
+            url = "dash://cappuccino:CPTrackingArea";
             openNewTab = "_self";
             break;
         case TEST_APP1:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPViewController";
+            url = "https://cappuccino-testbook.5apps.com/?t=KeyEquivalents";
             break;
     }
     window.open(url, openNewTab);

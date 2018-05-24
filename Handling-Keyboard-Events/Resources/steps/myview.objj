@@ -1,8 +1,23 @@
+/*
+In order for MyView to receive keyboard events, 
+it must be the first responder 
+in the responder chain of the application. 
+
+By implementing the acceptsFirstResponder: method 
+and returning YES from it, 
+MyView will be ready to handle 
+keyboard events in the keyDown: method. 
+
+The CPEvent passed to the keyDown: method 
+contains several properties that can be examined. 
+*/
 @implementation MyView : CPView
 {
     CPImage     _leftImage;
     CPImage     _middleImage;
     CPImage     _rightImage;
+
+    CPColor     _fillColor;
 }
 
 // Initialize a new CPView object using a rectangle.
@@ -13,6 +28,8 @@
 {
 
     self =[super initWithFrame:aFrame];
+
+    _fillColor = [CPColor whiteColor];
 
     _leftImage = [[CPImage alloc] 
                     initWithContentsOfFile:@"Resources/left.png"];
@@ -42,6 +59,36 @@
 }
 
 
+// In order to receive keyboard events from here, 
+// We must accept first responder status.
+- (BOOL) acceptsFirstResponder
+{
+    return YES;
+}
+
+- (void) keyDown:(CPEvent)theEvent
+{
+    var letter = [theEvent characters];
+    switch(letter){
+        case @"y":
+            _fillColor = [CPColor yellowColor];
+            break;
+        case @"r":
+            _fillColor = [CPColor redColor];
+            break;
+        case @"g":
+            _fillColor = [CPColor greenColor];
+            break;
+        case @"b":
+            _fillColor = [CPColor blueColor];
+            break;
+        default:
+            _fillColor = [CPColor whiteColor];
+    }
+
+    [self setNeedsDisplay:YES];
+}
+
 // Here we tell Cappuccino what to draw and how...
 // First we draw a bezier path around the frame rectangle.
 // Then we place 3 images on it.
@@ -52,7 +99,7 @@
             bezierPathWithRoundedRect:
                 [self bounds] xRadius:8.0 yRadius:8.0];
 
-    [[CPColor whiteColor] setFill];
+    [_fillColor setFill];
     [CPBezierPath fillRect:[self bounds]];
 
     [[CPColor grayColor] setStroke];

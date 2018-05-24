@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>step</key>
+		<string>Create a new project...</string>
+		<key>timestamp</key>
+		<integer>1526499222</integer>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-New-Project/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-new-project.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Setup the new project in the Xcode Interface Builder...</string>
+		<key>timestamp</key>
+		<real>1526499223</real>
+		<key>baseURL</key>
+		<string>../Steps/Setup-a-new-Project/</string>
+		<key>subStepsFileName</key>
+		<string>setup-a-new-project.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Download left, middle and right images...</string>
+		<key>timestamp</key>
+		<real>1526499224</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>download-images.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Subclass CPView...</string>
+		<key>timestamp</key>
+		<real>1526499226</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>myview.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Open AppController.j file and import MyView.j</string>
+		<key>timestamp</key>
+		<real>1526499225</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>appcontroller.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Create a Custom View...</string>
+		<key>timestamp</key>
+		<real>1526499225</real>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-Custom-View/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-custom-view.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Set class of the Custom View...</string>
+		<key>timestamp</key>
+		<real>1526499226</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>set-class-of-the-cpview.plist</string>
+	</dict>
+</array>
+</plist>

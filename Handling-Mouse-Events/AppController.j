@@ -68,7 +68,7 @@
     var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Drawing-in-CPView";
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Handling-Mouse-Events";
             break;
         case CLASS_REFERENCE:
             url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_tracking_area.html";

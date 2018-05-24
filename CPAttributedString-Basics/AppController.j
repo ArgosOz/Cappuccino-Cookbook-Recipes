@@ -1,8 +1,8 @@
 /*
  * AppController.j
- * Handling-Mouse-Events
+ * CPAttributedString-Basics
  *
- * Created by Argos Oz on May 23, 2018.
+ * Created by Argos Oz on May 24, 2018.
  * Copyright 2018, Army of Me, Inc. All rights reserved.
  */
 
@@ -11,12 +11,10 @@
 
 @import <MBSteps/StepsWindowController.j>
 
-@import "MyView.j"
-
-
 @implementation AppController : CPObject
 {
     @outlet CPWindow            theWindow;
+    @outlet CPTextView          _textView;
             CPWindowController  _stepsWindowController;
 }
 
@@ -33,16 +31,15 @@
     var newHeight = ([[_stepsWindowController tableView] rowHeight] * 7) + 54;
     [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, newHeight)];
 
+    var font = [CPFont boldSystemFontOfSize:18.0];
 
-    console.info("\n\n");
-    console.info("Download the images below and place them in your project's Resources folder.");
-    console.info("1. left.png");
-    console.info([[CPBundle mainBundle] pathForResource:@"left.png"]);
-    console.info("2. middle.png");
-    console.info([[CPBundle mainBundle] pathForResource:@"middle.png"]);
-    console.info("3. right.png");
-    console.info([[CPBundle mainBundle] pathForResource:@"right.png"]);
-    console.info("\n\n");
+    var attributesDict = @{
+        @"CPFontAttributeName": font,
+        @"CPForegroundColorAttributeName":[CPColor redColor],
+    };
+    var attributedString = [[CPAttributedString alloc] initWithString:@"Marvel Cinematic Universe" attributes:attributesDict];
+
+    [_textView setObjectValue:attributedString];
 }
 
 - (void)awakeFromCib
@@ -60,7 +57,7 @@
     var GITHUB_REPO = 0;
     var CLASS_REFERENCE = 1;
 
-    var TEST_APP1 = 2;
+    /* var TEST_APP1 = 2; */
 
 
     var DASH = 999;
@@ -68,18 +65,18 @@
     var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Handling-Keyboard-Events";
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPAttributedString-Basics";
             break;
         case CLASS_REFERENCE:
-            url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_event.html";
+            url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_attributed_string.html";
             break;
         case DASH:
-            url = "dash://cappuccino:CPEvent";
+            url = "dash://cappuccino:CPAttributedString";
             openNewTab = "_self";
             break;
-        case TEST_APP1:
-            url = "https://cappuccino-testbook.5apps.com/?t=KeyEquivalents";
-            break;
+        /* case TEST_APP1: */
+        /*     url = "https://cappuccino-testbook.5apps.com/?t=KeyEquivalents"; */
+        /*     break; */
     }
     window.open(url, openNewTab);
 }

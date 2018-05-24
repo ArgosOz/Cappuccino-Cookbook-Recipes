@@ -1,0 +1,5 @@
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+    @outlet CPTextView          _textView;
+}

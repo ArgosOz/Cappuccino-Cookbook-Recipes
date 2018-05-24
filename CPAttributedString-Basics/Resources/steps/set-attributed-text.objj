@@ -1,0 +1,15 @@
+
+var font = [CPFont boldSystemFontOfSize:18.0];
+
+var attributesDict = @{
+    @"CPFontAttributeName": font,
+    @"CPForegroundColorAttributeName":[CPColor redColor],
+};
+
+var attributedString = [
+	[CPAttributedString alloc] 
+        initWithString:@"Marvel Cinematic Universe" 
+        attributes:attributesDict
+                       ];
+
+[_textView setObjectValue:attributedString];

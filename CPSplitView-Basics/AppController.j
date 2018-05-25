@@ -58,6 +58,7 @@
     var GITHUB_REPO = 0;
     var CLASS_REFERENCE = 1;
     var DASH = 999;
+    var APPLE_REFERENCE = 981;
     
     var TEST_APP = 2;
     var url;
@@ -69,6 +70,9 @@
         case CLASS_REFERENCE:
             url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_split_view.html";
             break;
+        case APPLE_REFERENCE:
+            url = "https://developer.apple.com/documentation/appkit/nssplitview?language=objc";
+            break;            
         case DASH:
             url = "dash://cappuccino:CPSplitView";
             openNewTab = "_self";

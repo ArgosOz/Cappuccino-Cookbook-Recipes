@@ -1,0 +1,46 @@
+@implementation MyView : CPView
+{
+    CPColor     _color;
+}
+
+- (id)initWithFrame:(CPRect)frame {
+
+    self = [super initWithFrame:frame];
+    
+    _color = [CPColor whiteColor];
+
+
+    var notificationCenter = [CPNotificationCenter defaultCenter];
+    // Add a notification observer for ColorChange
+    // handleColorChange: should be called 
+    // when we receive the notification. 
+    [notificationCenter 
+        addObserver:self 
+        selector:@selector(handleColorChange:) 
+        name:@"ColorChange" 
+        object:nil];
+
+    return self;
+}
+
+- (void) handleColorChange:(CPNotification)notification {
+    // Pull the color out of the notification
+    var colorDictionary = [notification userInfo];
+    _color = [colorDictionary objectForKey:@"fillColor"];
+    // setNeedsDisplay: makes a note of the redraw request 
+    // and returns immediately. Subsequently Cappuccino will call 
+    // drawRect: method when it's appropriate.
+    [self setNeedsDisplay:YES];
+}
+
+- (void) drawRect:(CPRect)dirtyRect {
+    var path = [CPBezierPath bezierPathWithRect:[self bounds]];
+    [_color set];
+    [path fill];
+    
+    [[CPColor grayColor] set];
+    [path setLineWidth:3.0];
+    [path stroke];  
+}
+
+@end

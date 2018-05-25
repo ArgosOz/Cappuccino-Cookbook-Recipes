@@ -56,17 +56,17 @@
 		<key>step</key>
 		<string>Create a Custom View...</string>
 		<key>timestamp</key>
-		<real>1526499225</real>
+		<real>1526499235</real>
 		<key>baseURL</key>
 		<string>../Steps/Create-a-Custom-View/</string>
 		<key>subStepsFileName</key>
-		<string>create-a-custom-view.plist</string>
+		<string>create-a-custom-view-and-select.plist</string>
 	</dict>
 	<dict>
 		<key>step</key>
 		<string>Set class of the Custom View...</string>
 		<key>timestamp</key>
-		<real>1526499226</real>
+		<real>1526499246</real>
 		<key>baseURL</key>
 		<string>Resources/steps/</string>
 		<key>subStepsFileName</key>

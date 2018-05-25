@@ -1,0 +1,47 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+@import "MyView.j"
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+            int                 _colorState;
+}
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{
+    _colorState = -1;
+    var callback = function(){
+
+        _colorState *= -1;
+        var currentColor = 
+            _colorState == 1 ? 
+                [CPColor redColor] : [CPColor yellowColor];
+
+        var colorDictionary = 
+            [CPDictionary 
+                dictionaryWithObject:currentColor 
+                forKey:@"fillColor"];
+
+        var notificationCenter = 
+            [CPNotificationCenter defaultCenter];
+
+        [notificationCenter 
+            postNotificationName:@"ColorChange" 
+            object:self 
+            userInfo:colorDictionary];
+    }
+
+    [CPTimer 
+        scheduledTimerWithTimeInterval:1.8 
+        callback:callback 
+        repeats:YES];
+}
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

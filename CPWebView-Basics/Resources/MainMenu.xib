@@ -43,6 +43,12 @@
                                     <action selector="openLinkInNewTab:" target="450" id="aGB-F0-reX"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Apple Class Reference..." tag="981" keyEquivalent="A" id="rFY-dO-DKb">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="Gkc-nU-Gni"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="NdU-7i-W7c">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
@@ -94,14 +100,5 @@
                 <outlet property="theWindow" destination="371" id="459"/>
             </connections>
         </customObject>
-        <menuItem title="Class Reference" tag="1" keyEquivalent="C" id="vlJ-bk-wXD">
-            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-            <connections>
-                <action selector="openLinkInNewTab:" target="450" id="hhh-Ec-nNa"/>
-            </connections>
-        </menuItem>
-        <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="2nf-XZ-P6w">
-            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-        </menuItem>
     </objects>
 </document>

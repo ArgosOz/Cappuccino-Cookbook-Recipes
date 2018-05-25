@@ -12,7 +12,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <menu title="AMainMenu" systemMenu="main" id="29" userLabel="MainMenu">
             <items>
                 <menuItem title="CPNumberFormatter Basics" id="56">
@@ -40,6 +40,12 @@
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
                                     <action selector="openLinkInNewTab:" target="450" id="8GC-QC-vVc"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Apple Class Reference..." tag="981" keyEquivalent="A" id="jdv-0e-Q0r">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="Bim-H5-cQT"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="Yx6-u2-sf3">

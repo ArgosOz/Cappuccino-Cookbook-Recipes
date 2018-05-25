@@ -1,0 +1,132 @@
+var NEUTRAL     = 0;
+var BACKGROUND_LAYER  = 1;
+var IMAGE_LAYER  = 2;
+
+/* 
+We will use multiple layers to draw our custom view.
+*/
+@implementation MyView : CPView
+{
+    CALayer     _largeLayer
+    CALayer     _smallLayer
+    CPImage     _image;
+
+    // Two layers share the same drawLayer:inContext: method here,
+    // We need a modal system to draw different things 
+    // to different layers.
+    int         _currentContext;
+}
+
+
+
+
+- (void) awakeFromCib {
+    
+    // Create a layer.
+    _largeLayer = [CALayer layer]; 
+    [self setWantsLayer:YES]; 
+    [self setLayer:_largeLayer];
+
+    [_largeLayer setBounds:[self bounds]];
+    // Set delegate to self 
+    // and receive drawLayer:inContext: method calls here.
+    [_largeLayer setDelegate:self]; 
+
+    _currentContext = BACKGROUND_LAYER; 
+    // setNeedsDisplay: makes a note of the redraw request 
+    // and returns immediately. Subsequently Cappuccino will call 
+    // drawLayer:inContext: method when it's appropriate.
+    [_largeLayer setNeedsDisplay];
+
+
+    // Load the image
+    _image = [[CPImage alloc] 
+        initWithContentsOfFile:@"Resources/nature-1898150__340.jpg" 
+        size:CGSizeMake(
+            [self frameSize].width/2, [self frameSize].height/2
+            )
+        ];
+    
+    // trigger imageDidLoad: method.
+    [_image setDelegate:self]; 
+
+    // Create a layer
+    _smallLayer = [CALayer layer]; 
+    // Set delegate to self 
+    // and receive drawLayer:inContext: method calls here.
+    [_smallLayer setDelegate:self];
+
+
+    [_largeLayer addSublayer:_smallLayer];
+
+}
+
+
+
+
+
+- (void) imageDidLoad:(CPImage)anImage
+{
+
+    [_smallLayer setBounds:CGRectMake(
+            0.0, 
+            0.0, 
+            [_image size].width, 
+            [_image size].height
+        )
+    ];
+    // You can change anchor point 
+    // using the commented out code below.
+    // It's commented out here 
+    // because default point is 0.5, 0.5.
+    // Range is 0.0...1.0 
+    // 0.5 represents center.
+    /* [_smallLayer setAnchorPoint:CGPointMakeZero()]; */
+    
+    [_smallLayer setPosition:CGPointMake(
+            [self boundsSize].width/2, 
+            [self boundsSize].height/2
+        )
+    ];
+    
+    _currentContext = IMAGE_LAYER;
+    // setNeedsDisplay: makes a note of the redraw request 
+    // and returns immediately. Subsequently Cappuccino will call 
+    // drawLayer:inContext: method when it's appropriate.
+    [_smallLayer setNeedsDisplay];
+}
+
+
+
+
+
+- (void)drawLayer:(CALayer)aLayer inContext:(CGContext)aContext
+{
+
+    switch(_currentContext){
+        case BACKGROUND_LAYER:
+            // CG stands for CoreGraphics. 
+            CGContextSetLineWidth(aContext, 9);
+            CGContextStrokeRect(aContext, [aLayer bounds]);
+            break;
+        case IMAGE_LAYER:
+            if([_image loadStatus] != CPImageLoadStatusCompleted){    
+                // setNeedsDisplay: makes a note 
+                // of the redraw request 
+                // and returns immediately. 
+                // Subsequently Cappuccino will call 
+                // drawLayer:inContext: method when it's appropriate.            
+                [_image setDelegate:self];
+            } else {                
+                CGContextDrawImage(
+                    aContext, [_smallLayer bounds], _image
+                );
+            }
+            break;
+    }
+
+    // Remember to revert to neutral context.
+    _currentContext = NEUTRAL; 
+}
+
+@end

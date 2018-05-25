@@ -24,33 +24,5 @@
 		<key>imageName</key>
 		<string>100.gif</string>
 	</dict>
-	<dict>
-		<key>type</key>
-		<integer>0</integer>
-		<key>content</key>
-		<string> </string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>0</integer>
-		<key>content</key>
-		<string>Go to &quot;Document Outline&quot; on the left side of the Xcode window...</string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>0</integer>
-		<key>content</key>
-		<string>Click on &quot;Custom View&quot; row to select the view...</string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>1</integer>
-		<key>width</key>
-		<integer>540</integer>
-		<key>height</key>
-		<integer>336</integer>
-		<key>imageName</key>
-		<string>105.gif</string>
-	</dict>
 </array>
 </plist>

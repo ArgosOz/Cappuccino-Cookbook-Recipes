@@ -42,6 +42,12 @@
                                     <action selector="openLinkInNewTab:" target="450" id="fOw-WE-OrQ"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Apple Class Reference..." tag="981" keyEquivalent="A" id="5mA-qu-SfC">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="ohd-15-YUu"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="XhQ-kW-o5E">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
@@ -67,7 +73,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" copiesOnScroll="NO" id="Wcl-JQ-uGW">
                             <rect key="frame" x="1" y="1" width="201" height="133"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="DRy-et-AgJ">
                                     <rect key="frame" x="0.0" y="0.0" width="201" height="133"/>

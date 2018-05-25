@@ -27,8 +27,8 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Help" id="103">
-                    <menu key="submenu" title="Help" id="106">
+                <menuItem title="Links" id="103">
+                    <menu key="submenu" title="Links" id="106">
                         <items>
                             <menuItem title="GitHub Repository for this Project..." keyEquivalent="g" id="iTC-6Q-u5O">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
@@ -40,6 +40,12 @@
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
                                     <action selector="openLinkInNewTab:" target="450" id="i4Y-IU-c3m"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Apple Class Reference..." tag="981" keyEquivalent="A" id="TE3-tl-jTk">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="DAz-vg-k2j"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="g7L-lf-4CP">

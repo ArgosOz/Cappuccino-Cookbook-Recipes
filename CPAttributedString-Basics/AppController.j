@@ -61,6 +61,8 @@
 
 
     var DASH = 999;
+    var APPLE_REFERENCE = 981;
+
     var url;
     var openNewTab = "_blank";
     switch([sender tag]){
@@ -69,6 +71,9 @@
             break;
         case CLASS_REFERENCE:
             url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_attributed_string.html";
+            break;
+        case APPLE_REFERENCE:
+            url = "https://developer.apple.com/documentation/foundation/nsattributedstring?language=objc";
             break;
         case DASH:
             url = "dash://cappuccino:CPAttributedString";

@@ -4,12 +4,10 @@
 In order for MyView to receive keyboard events, 
 it must be the first responder 
 in the responder chain of the application. 
-
 By implementing the acceptsFirstResponder: method 
 and returning YES from it, 
 MyView will be ready to handle 
 keyboard events in the keyDown: method. 
-
 The CPEvent passed to the keyDown: method 
 contains several properties that can be examined. 
 */

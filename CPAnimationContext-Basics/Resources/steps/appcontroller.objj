@@ -1,0 +1,90 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+@import "MyView.j"
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+    @outlet MyView              _myView;
+            BOOL                _isSmall;
+}
+
+
+
+- (void) applicationDidFinishLaunching:(CPNotification)aNotification
+{
+    _isSmall = NO;
+}
+
+
+// The action for the Resize View button.
+- (IBAction) resizeView:(id)sender {
+
+    // Seems like Cocoa provides default values 
+    // for an animation and Cappucino does not.
+    // Without the setup below, 
+    // animator objects cannot produce any animation.
+    var duration = 0.3;
+    var controlsPoints  = [0, 0, 1, 1];
+    var tf = [CAMediaTimingFunction 
+                functionWithControlPoints:controlsPoints[0] 
+                                         :controlsPoints[1] 
+                                         :controlsPoints[2] 
+                                         :controlsPoints[3]
+                                    ];
+
+    // Set animation properties
+    var message = @"Done ";
+
+    [[CPAnimationContext currentContext] 
+                            setDuration:duration];
+    
+    [[CPAnimationContext currentContext] 
+                            setTimingFunction:tf];
+
+    [[CPAnimationContext currentContext] 
+                    setCompletionHandler:
+                        [self completionHandlerFromString:message]
+                ];
+
+    [[_myView animator] setWantsPeriodicFrameUpdates:YES];
+
+
+    // target rectangles...
+    var small = CPMakeRect(20, 58, 54, 54);
+    var large = CPMakeRect(20, 58, 163, 96);
+
+    if (_isSmall == YES) {
+        [[_myView animator] setFrame:large];
+        _isSmall = NO;
+    } else {
+        [[_myView animator] setFrame:small];
+        _isSmall = YES;
+    }
+}
+
+
+// Fires when the animation is complete.
+- (Function) completionHandlerFromString:(CPString)aMessage
+{
+    if (!aMessage || ![aMessage length])
+        return nil;
+
+    var s = new Date();
+    return function()
+    {
+        var e = new Date() - s;
+        CPLogConsole(aMessage + " in " + e + " ms");
+    };
+}
+
+
+
+- (void) awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

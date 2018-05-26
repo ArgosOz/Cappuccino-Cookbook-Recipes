@@ -45,6 +45,10 @@
     [theWindow setFullPlatformWindow:YES];
 }
 
+
+
+
+
 - (IBAction) openLinkInNewTab:(id)sender
 {
     var GITHUB_REPO = 0;

@@ -55,8 +55,8 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="s6A-Wd-VdP"/>
-                            <menuItem title="CPAnimatablePropertyContainerTest..." tag="2" keyEquivalent="C" id="AXU-Jx-2hA">
-                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                            <menuItem title="CPAnimatablePropertyContainerTest..." tag="2" id="AXU-Jx-2hA">
+                                <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="openLinkInNewTab:" target="450" id="8HC-kc-EqG"/>
                                 </connections>

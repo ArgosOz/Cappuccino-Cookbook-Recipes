@@ -1,0 +1,219 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+var FRONT = 1;
+var BACK = -1;
+var FACE_SWITCHER = -1;
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow        theWindow;
+    @outlet CPImageView     _myView; 
+    @outlet CPButton        _flipButton;
+
+            float           _initialWidth;
+            float           _initialHeight;
+            float           _initialX;
+            
+            int             _counter;
+            int             _face;
+
+            // Cache images and swap them when necessary.
+            CPImage          _imageCacheNormal;
+            CPImage          _imageCachedFlippedHorizontally;
+}
+
+
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{
+    _face = 1;
+
+    _initialX = [_myView frameOrigin].x;
+    _initialWidth = [_myView frameSize].width;
+    _initialHeight = [_myView frameSize].height;
+    _imageCacheNormal = [_myView image];
+    // to receive imageDidLoad event...
+    [_imageCacheNormal setDelegate:self];
+}
+
+
+
+- (void) imageDidLoad:(CPImage)anImage
+{    
+    // make a horizontally flipped copy of the image
+    // We're going to use flipHorizontally category method.
+    _imageCachedFlippedHorizontally = 
+        [[CPImage alloc] initWithData:
+            [_imageCacheNormal flipHorizontally:_myView]
+        ]; 
+}
+
+
+
+
+- (IBAction) buttonClicked:(id)sender {
+    _counter = 0;
+    [_flipButton setEnabled:NO];
+    [self flipImage];
+}
+
+
+
+
+- (void) flipImage
+{
+    var targetPoint = CGPointMake(0,[_myView frameOrigin].y);
+    var targetWidth;
+
+    if(_counter > 0){ // means we're automatically re-flipping.
+        targetPoint.x = _initialX;
+        targetWidth = _initialWidth;
+    } else { // means we're flipping right after the button click.
+        targetPoint.x = _initialWidth / 2;
+        targetWidth = 0.0;
+    }
+    var duration = 0.36;
+    var controlsPoints  = [0, 0, 1, 1];
+    var timingFunction = [CAMediaTimingFunction 
+        functionWithControlPoints:controlsPoints[0] 
+                                 :controlsPoints[1] 
+                                 :controlsPoints[2] 
+                                 :controlsPoints[3]
+                        ];
+
+    
+    var animationCompletedDictionary = @{
+            @"message"      : @"SLIDE OUT Animation is done.",
+        }
+
+    [animationCompletedDictionary 
+        setObject:1 
+        forKey:@"movementDirection"
+    ];
+    
+    [CPAnimationContext runAnimationGroup:function(context)
+    {
+        [context setDuration:duration];
+        [context setTimingFunction:timingFunction];
+
+        [animationCompletedDictionary 
+            setObject:context 
+            forKey:@"animationContext"
+        ];
+
+        [[_myView animator] setFrameOrigin:targetPoint];
+
+        var targetFrameSize = 
+            CGSizeMake(targetWidth,[_myView frameSize].height);
+        
+        [[_myView animator] setFrameSize:targetFrameSize];
+
+
+    } completionHandler:
+        [self completionHandler:animationCompletedDictionary]];
+}
+
+
+
+
+
+- (Function) completionHandler:(CPString)aDict
+{
+    _counter++;
+
+    var s = new Date();
+    return function()
+    {
+        var e = new Date() - s
+
+        if(_counter < 2)
+            [CPTimer scheduledTimerWithTimeInterval:.09 
+                     target:self 
+                     selector:@selector(reFlip:) 
+                     userInfo:aDict 
+                     repeats:NO
+                ];
+        else
+            [_flipButton setEnabled:YES];
+    };
+}
+
+
+
+
+- (void) reFlip:(id)userInfo
+{
+   _face *= FACE_SWITCHER;
+   switch(_face){
+        case FRONT:
+            [_myView setImage:_imageCacheNormal];
+            break;
+        case BACK:
+            [_myView setImage:_imageCachedFlippedHorizontally];
+            break;
+    }
+
+    [self flipImage];
+}
+
+
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end
+
+
+
+
+
+// CPImage category to flip the image horizontally.
+@implementation CPImage (ImageManipulation)
+
+- (CPData) flipHorizontally:(CPImageView)containerView
+{
+
+    var dataURL;
+    if (CPFeatureIsCompatible(CPHTMLCanvasFeature))
+    {
+        var canvas = document.createElement("canvas");
+        var ctx = canvas.getContext("2d");
+
+        // We need natural width and height of the image
+        // to calculate horizontal flip
+        canvas.width = containerView._DOMImageElement.naturalWidth;
+        canvas.height = containerView._DOMImageElement.naturalHeight;
+
+
+        ctx.translate(0, 0);
+        // flips matrix horizontally
+        ctx.scale(-1,1);
+
+        // CPImageView was modeled on Cocoa 
+        // and Cocoa has no notion of DOM... but browsers have.
+        // since containerView is an instance of CPImageView, 
+        // we have a _DOMImageElement variable.         
+        ctx.drawImage(
+            containerView._DOMImageElement, // image
+            -containerView._DOMImageElement.naturalWidth, // x
+            0 // y
+        );
+
+        // Extract canvas content as dataURL
+        dataURL = canvas.toDataURL("image/png");
+    }
+    else
+        return nil;
+
+    // Remove "data:image/png;base64,"
+    var base64 = dataURL.replace(/^data:image\/png;base64,/, "");
+    // return as CPData
+    return [CPData dataWithBase64:base64];
+
+}
+
+@end

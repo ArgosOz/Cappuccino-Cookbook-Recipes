@@ -12,13 +12,13 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="-3" userLabel="Application"/>
         <menu title="AMainMenu" systemMenu="main" id="29" userLabel="MainMenu">
             <items>
-                <menuItem title="CALayer Basics" id="56">
-                    <menu key="submenu" title="CALayer Basics" systemMenu="apple" id="57">
+                <menuItem title="Flip Animation" id="56">
+                    <menu key="submenu" title="Flip Animation" systemMenu="apple" id="57">
                         <items>
-                            <menuItem title="About..." id="58">
+                            <menuItem title="About NewApplication" id="58">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
@@ -30,35 +30,35 @@
                 <menuItem title="Links" id="103">
                     <menu key="submenu" title="Links" id="106">
                         <items>
-                            <menuItem title="GitHub Repository for this Project..." keyEquivalent="g" id="0Pq-sP-cTS">
+                            <menuItem title="GitHub Repository for this Project..." keyEquivalent="g" id="BtM-ps-Tr0">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
-                                    <action selector="openLinkInNewTab:" target="450" id="Lld-gd-oza"/>
+                                    <action selector="openLinkInNewTab:" target="450" id="4O7-tq-SmO"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Class Reference..." tag="1" keyEquivalent="C" id="vXV-IF-559">
+                            <menuItem title="Class Reference..." tag="1" keyEquivalent="C" id="ond-dp-61m">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
-                                    <action selector="openLinkInNewTab:" target="450" id="R0u-Sk-8OY"/>
+                                    <action selector="openLinkInNewTab:" target="450" id="7Fg-yf-JfV"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Apple Class Reference..." tag="981" keyEquivalent="A" id="UMh-g2-Ohd">
+                            <menuItem title="Apple Class Reference..." tag="981" keyEquivalent="A" id="XCo-Dv-jC4">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
-                                    <action selector="openLinkInNewTab:" target="450" id="JTH-2A-FmL"/>
+                                    <action selector="openLinkInNewTab:" target="450" id="fa8-aA-cej"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="ObB-sJ-Hhv">
+                            <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="TQD-H8-Qhk">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
-                                    <action selector="openLinkInNewTab:" target="450" id="fM3-K7-fNK"/>
+                                    <action selector="openLinkInNewTab:" target="450" id="2mM-Ye-gvS"/>
                                 </connections>
                             </menuItem>
-                            <menuItem isSeparatorItem="YES" id="0qx-NO-VaU"/>
-                            <menuItem title="CPGraphicsTest..." tag="2" id="n1Z-Gy-Ch0">
+                            <menuItem isSeparatorItem="YES" id="5ga-HI-Lmz"/>
+                            <menuItem title="CPAnimatablePropertyContainerTest..." tag="2" id="fCz-z0-oRG">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="openLinkInNewTab:" target="450" id="qA0-f5-XFl"/>
+                                    <action selector="openLinkInNewTab:" target="450" id="hpX-MC-crD"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -69,23 +69,41 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="480" height="522"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
-            <view key="contentView" id="372">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+            <view key="contentView" misplaced="YES" id="372">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="522"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView misplaced="YES" id="VKy-56-QwY" customClass="MyView">
-                        <rect key="frame" x="20" y="150" width="203" height="190"/>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="JP8-ad-oV1">
+                        <rect key="frame" x="20" y="296" width="226" height="170"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="ireland-1985088__340" id="tnR-wF-ggj"/>
+                    </imageView>
+                    <button verticalHuggingPriority="750" misplaced="YES" id="4Qu-iV-DWP">
+                        <rect key="frame" x="14" y="474" width="238" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Flip Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2vM-1Q-M7u">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buttonClicked:" target="450" id="q9Q-C4-r55"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="198" y="-187"/>
         </window>
         <customObject id="450" customClass="AppController">
             <connections>
+                <outlet property="_flipButton" destination="4Qu-iV-DWP" id="Gue-sU-R9P"/>
+                <outlet property="_myView" destination="JP8-ad-oV1" id="olb-tB-fyw"/>
                 <outlet property="theWindow" destination="371" id="459"/>
             </connections>
         </customObject>
     </objects>
+    <resources>
+        <image name="ireland-1985088__340" width="108.72000122070312" height="81.599998474121094"/>
+    </resources>
 </document>

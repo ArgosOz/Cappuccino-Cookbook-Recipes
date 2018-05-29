@@ -1,0 +1,43 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+@import "MyNames.j"
+
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow    theWindow;
+}
+
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{
+    var names = [[MyNames alloc] init];
+    [names setDelegate:self];
+   
+    [names deleteName:@"Thor"];
+}
+
+
+
+- (BOOL) shouldDeleteName:(CPString)aName
+{
+    if([aName isEqualToString:@"Thor"] == YES){
+        console.info("FROM AppController.j :", 
+                "Deleting name:", aName);
+
+        return YES;
+    }
+
+    return NO;
+}
+
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

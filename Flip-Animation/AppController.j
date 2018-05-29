@@ -175,7 +175,7 @@ var FACE_SWITCHER = -1;
     var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Swap-Views-Animation";
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/Flip-Animation";
             break;
         case CLASS_REFERENCE:
             url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_animation_context.html";

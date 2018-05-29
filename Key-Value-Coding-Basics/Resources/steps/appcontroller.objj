@@ -1,0 +1,35 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+/*
+Notice ___count variable with 3 underscores.
+We'll synthesize it with the @accessors directive. 
+count and setCount: methods will be automatically created
+at runtime.
+ */
+@implementation AppController : CPObject
+{
+    @outlet CPWindow    theWindow;      
+    @outlet CPButton    _button;
+            CPInteger   ___count @accessors(property=count);    
+}
+
+/*
+Set the ___count variable value by calling the setValue:forKey 
+method rather than calling the setCount: method directly.
+ */
+- (IBAction) buttonClicked:(id)sender
+{
+    [self setValue:[CPNumber numberWithInt:99] forKey:@"count"];
+}
+
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+
+@end

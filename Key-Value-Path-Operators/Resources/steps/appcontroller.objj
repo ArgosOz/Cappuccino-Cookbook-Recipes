@@ -1,0 +1,70 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+
+// AnObject class
+@implementation AnObject : CPObject
+{
+    CPInteger __width @accessors(property=width);
+}
+@end
+
+
+
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow    theWindow;            
+}
+
+
+
+- (void) applicationDidFinishLaunching:(CPNotification)aNotification
+{
+    // Create an array
+    var anArray = [[CPMutableArray alloc] init];
+
+    // Create anObject
+    var anObject = [[AnObject alloc] init];
+    [anObject setWidth:10];
+    [anArray addObject:anObject];
+
+    anObject = [[AnObject alloc] init];
+    [anObject setWidth:20];
+    [anArray addObject:anObject];
+
+    anObject = [[AnObject alloc] init];
+    [anObject setWidth:20];
+    [anArray addObject:anObject];
+
+    anObject = [[AnObject alloc] init];
+    [anObject setWidth:40];
+    [anArray addObject:anObject];
+
+    // These are being Key-Value Coding 
+    // (KVC) Collection Operators
+    console.info(@"Count :", 
+        [anArray valueForKeyPath:@"@count"]);
+
+    console.info(@"Max   :", 
+        [anArray valueForKeyPath:@"@max.width"]);
+
+    console.info(@"Min   :", 
+        [anArray valueForKeyPath:@"@min.width"]);
+
+    console.info(@"Sum   :", 
+        [anArray valueForKeyPath:@"@sum.width"]);
+
+}
+
+
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

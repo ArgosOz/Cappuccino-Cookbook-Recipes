@@ -1,0 +1,56 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+            CPTimer             _timer;
+}
+
+
+- (IBAction) startTimer:(id)sender
+{
+    
+    if(_timer != nil){
+        [_timer invalidate];
+    }
+
+    _timer = [CPTimer scheduledTimerWithTimeInterval:0.9 
+                                target:self 
+                                selector:@selector(timerFired:) 
+                                userInfo:nil 
+                                repeats:YES
+                    ];
+}
+
+
+
+- (IBAction) stopTimer:(id)sender
+{
+    [_timer invalidate];
+    _timer = nil;
+    console.info(@"Timer stopped.");
+}
+
+
+
+- (void) timerFired:(CPTimer)timer
+{
+    console.info(@"Timer Fired: %s", [[CPDate date] description]);
+}
+
+
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+
+
+
+@end
+
+

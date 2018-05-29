@@ -24,16 +24,6 @@
 	</dict>
 	<dict>
 		<key>step</key>
-		<string>Download the image...</string>
-		<key>timestamp</key>
-		<real>1526500329</real>
-		<key>baseURL</key>
-		<string>Resources/steps/</string>
-		<key>subStepsFileName</key>
-		<string>download-images.plist</string>
-	</dict>
-	<dict>
-		<key>step</key>
 		<string>Open the AppController.j file...</string>
 		<key>timestamp</key>
 		<real>1526499225</real>
@@ -44,39 +34,29 @@
 	</dict>
 	<dict>
 		<key>step</key>
-		<string>Create an Image View...</string>
+		<string>Create a Text Field...</string>
 		<key>timestamp</key>
-		<real>1526499935</real>
+		<real>1526499245</real>
 		<key>baseURL</key>
-		<string>../Steps/Create-an-Image-View/</string>
+		<string>../Steps/Create-a-Text-Field/</string>
 		<key>subStepsFileName</key>
-		<string>create-an-image-view-and-select.plist</string>
+		<string>create-a-text-field-and-select.plist</string>
 	</dict>
 	<dict>
 		<key>step</key>
-		<string>Set the Image View&apos;s image...</string>
+		<string>Bind the &quot;Text Field&quot; to the ___count variable...</string>
 		<key>timestamp</key>
-		<real>1526499226</real>
+		<real>1526499256</real>
 		<key>baseURL</key>
 		<string>Resources/steps/</string>
 		<key>subStepsFileName</key>
-		<string>set-image-views-image.plist</string>
-	</dict>
-	<dict>
-		<key>step</key>
-		<string>Connect the &quot;Image View&quot; to _myView outlet...</string>
-		<key>timestamp</key>
-		<real>1526399326</real>
-		<key>baseURL</key>
-		<string>Resources/steps/</string>
-		<key>subStepsFileName</key>
-		<string>connect-myview-outlet.plist</string>
+		<string>bind-text-field.plist</string>
 	</dict>
 	<dict>
 		<key>step</key>
 		<string>Create a Button...</string>
 		<key>timestamp</key>
-		<real>1526499245</real>
+		<real>1526499257</real>
 		<key>baseURL</key>
 		<string>../Steps/Create-a-Button/</string>
 		<key>subStepsFileName</key>
@@ -86,21 +66,11 @@
 		<key>step</key>
 		<string>Connect the button to buttonClicked: action...</string>
 		<key>timestamp</key>
-		<real>1526499254</real>
+		<real>1526499256</real>
 		<key>baseURL</key>
 		<string>Resources/steps/</string>
 		<key>subStepsFileName</key>
 		<string>connect-the-button-to-action.plist</string>
-	</dict>
-	<dict>
-		<key>step</key>
-		<string>Connect the button to _flipButton outlet...</string>
-		<key>timestamp</key>
-		<real>1526499257</real>
-		<key>baseURL</key>
-		<string>Resources/steps/</string>
-		<key>subStepsFileName</key>
-		<string>connect-flipbutton-outlet.plist</string>
 	</dict>
 </array>
 </plist>

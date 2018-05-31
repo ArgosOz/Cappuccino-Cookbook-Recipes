@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>step</key>
+		<string>Create a new project...</string>
+		<key>timestamp</key>
+		<integer>1526499222</integer>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-New-Project/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-new-project.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Setup the new project in the Xcode Interface Builder...</string>
+		<key>timestamp</key>
+		<real>1526499223</real>
+		<key>baseURL</key>
+		<string>../Steps/Setup-a-new-Project/</string>
+		<key>subStepsFileName</key>
+		<string>setup-a-new-project.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Download the wav file...</string>
+		<key>timestamp</key>
+		<real>1526499224</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>download-wav.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Open the AppController.j file...</string>
+		<key>timestamp</key>
+		<real>1526499225</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>appcontroller.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Create a Button...</string>
+		<key>timestamp</key>
+		<real>1526499245</real>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-Button/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-button.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Connect the button to related action...</string>
+		<key>timestamp</key>
+		<real>1526499256</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>connect-the-button-to-action.plist</string>
+	</dict>
+</array>
+</plist>

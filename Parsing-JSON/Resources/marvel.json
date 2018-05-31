@@ -1,0 +1,20 @@
+{
+    "names":[
+        {
+            "name" : "Thor",
+            "type" : "superhero"
+        },
+        {
+            "name" : "Spider-Man",
+            "type" : "superhero"
+        },
+        {
+            "name" : "Stan Lee",
+            "type" : "editor"
+        },
+        {
+            "name" : "Len Wein",
+            "type" : "editor"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+@import "Data.j"
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;            
+}
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{
+
+    var userDefaults = [CPUserDefaults standardUserDefaults];
+    var dataRawString = [userDefaults objectForKey:@"archivedData"];
+    
+    var cpData = [CPData dataWithRawString:dataRawString];
+    var data = [CPKeyedUnarchiver 
+                    unarchiveObjectWithData:cpData];
+
+}
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

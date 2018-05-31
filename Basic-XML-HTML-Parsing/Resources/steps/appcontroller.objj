@@ -1,0 +1,50 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+}
+
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{
+
+    var path = 
+        [[CPBundle mainBundle] pathForResource:@"marvel.xml"];
+    
+    var request = [CPURLRequest requestWithURL:path];
+
+    var connection = [CPURLConnection connectionWithRequest:request 
+    	                                           delegate:self];
+}
+
+
+- (void) connection:(CPURLConnection)connection 
+     didReceiveData:(CPString)dataString
+{
+    if (!dataString)
+        return;
+
+    var names = xmlDoc.getElementsByTagName("name");
+
+    for(var i=0; i &lt; names.length; i++){
+         console.info("NAME: %s, 
+                        TYPE: %s", 
+                        names.item(i).innerHTML.trim(), 
+                        names.item(i).getAttribute("type")
+         	        );
+    }    
+}
+
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+
+@end

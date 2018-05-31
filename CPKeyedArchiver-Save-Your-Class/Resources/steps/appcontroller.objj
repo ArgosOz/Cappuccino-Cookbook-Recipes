@@ -1,0 +1,41 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+@import "Data.j"
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;            
+}
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{
+
+    var data = [[Data alloc] init];
+    [data setVersion:1];
+    [data setDate:[CPDate new]];
+
+    var namesArray = [[CPMutableArray alloc] init];
+    [namesArray addObject:@"Thor"];
+    [namesArray addObject:@"Spider-Man"];
+    [namesArray addObject:@"Hulk"];
+
+    [data setNames:namesArray];
+
+    // data class is ready, 
+    // now archive its data for future use.
+    var archivedData = [CPKeyedArchiver 
+                            archivedDataWithRootObject:data];
+    // Save in the browser
+    var defaults = [CPUserDefaults standardUserDefaults];
+    [defaults setObject:[archivedData rawString] 
+                            forKey:@"archivedData"];
+    
+}
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

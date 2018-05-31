@@ -1,0 +1,32 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+}
+
+
+
+- (IBAction) buttonClicked:(id)sender
+{
+    var path = [[CPBundle mainBundle] 
+                    pathForResource:@"431286" ofType:@"wav"];
+
+    var sound = [[CPSound alloc] 
+                    initWithContentsOfFile:path byReference:NO];
+    
+    [sound play];
+}
+
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end
+
+

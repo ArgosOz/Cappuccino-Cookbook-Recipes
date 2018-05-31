@@ -1,0 +1,64 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+}
+
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{
+
+    var path = [[CPBundle mainBundle] 
+                    pathForResource:@"marvel.json"];
+
+    var request = [CPURLRequest requestWithURL:path];
+
+    var connection = [CPURLConnection 
+                        connectionWithRequest:request delegate:self];
+
+}
+
+
+- (void) connection:(CPURLConnection)connection 
+     didReceiveData:(CPString)dataString
+{
+    if (!dataString)
+        return;
+
+    console.info("\n\n");
+    console.info("This is the JSON file:");
+    console.info("\n");
+    console.info(dataString);
+    console.info("\n\n");
+        
+    var jsonObject = [[CPData dataWithString:dataString] JSONObject];
+    
+    console.info("\n\n");
+    console.info("This is the parsed data:");
+    console.info("\n");
+    var names = jsonObject.names;
+    for(var i=0; i &lt; names.length; i++){
+
+         console.info("NAME: %s, 
+                       TYPE: %s", 
+                       names[i].name, 
+                       names[i].type
+                    );
+
+    }
+    console.info("\n\n");
+
+}
+
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

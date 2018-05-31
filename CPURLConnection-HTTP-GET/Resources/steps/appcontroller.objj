@@ -1,0 +1,74 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+            CPData              data;            
+}
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{
+
+    var url = [CPURL URLWithString:@"index.html"];
+    var request = [CPURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"GET"];
+
+    var connection = [[CPURLConnection alloc] 
+                        initWithRequest:request delegate:self];
+
+}
+
+
+- (void) connection:(CPURLConnection)connection 
+ didReceiveResponse:(CPURLResponse)response
+{
+    console.info("\n\n");
+    console.info("---------> connection:didReceiveResponse:");
+    console.info("\n");
+    console.info(response);
+    console.info("\n\n");
+}
+
+- (void) connection:(CPURLConnection)connection 
+     didReceiveData:(CPString)dataString
+{
+    console.info("\n\n");
+    console.info("---------> connection:didReceiveData:");
+    console.info("\n");
+    if (!dataString)
+        return;
+    console.info("Data string has been received.");
+    data = [CPData dataWithString:dataString];
+    console.info("\n\n");
+}
+
+- (void) connection:(CPURLConnection)connection 
+   didFailWithError:(CPException)error
+{
+    console.info("\n\n");
+    console.info("---------> connection:didFailWithError:");
+    console.info("\n");
+    console.info(error);
+    console.info("\n\n");
+}
+
+- (void) connectionDidFinishLoading:(CPURLConnection)connection
+{
+    console.info("\n\n");
+    console.info("---------> connectionDidFinishLoading:");
+    console.info("\n");
+    console.info([data string]);
+    console.info("\n\n");
+}
+
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

@@ -1,0 +1,43 @@
+@implementation Data : CPObject
+{
+    CPInteger       version @accessors();
+    CPDate          date    @accessors();
+    CPMutableArray  names   @accessors();
+}
+
+/*
+To archive a class, 
+you need to implement the encodeWithCoder: method, 
+which will be called by the CPKeyedArchiver class 
+when archiving your object.
+
+To encode a field, 
+you need to select the proper encode method, 
+such as encodeInteger:, encodeFloat:, or encodeObject: 
+for the field type that you are encoding.
+ */
+- (void) encodeWithCoder:(CPCoder)encoder
+{
+    [encoder encodeObject:[self version] forKey:@"version"];
+    [encoder encodeObject:date forKey:@"date"];
+    [encoder encodeObject:names forKey:@"names"];
+}
+
+/*
+To load the Data class archive, 
+the CPKeyedUnarchiver class will 
+call initWithCoder: method.
+ */
+- (id) initWithCoder:(CPCoder)decoder
+{
+    self = [super init];
+    if(self != nil){
+        version = [decoder decodeObjectForKey:@"version"];
+        date = [decoder decodeObjectForKey:@"date"];
+        names = [[CPMutableArray alloc] 
+            initWithArray:[decoder decodeObjectForKey:@"names"]];
+    }
+    return self;
+}
+
+@end

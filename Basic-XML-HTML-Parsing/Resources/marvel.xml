@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<names>
+  <name type="Superhero">
+    Thor
+  </name>
+  <name type="Superhero">
+    Spider-Man
+  </name>
+  <name type="Editor">
+    Stan Lee
+  </name>
+  <name type="Editor">
+    Len Wein
+  </name>
+</names>

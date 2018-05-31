@@ -90,13 +90,13 @@
             openNewTab = "_self";
             break;
         case TEST_APP1:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPImageViewTest";
+            url = "https://cappuccino-testbook.5apps.com/#CPImageViewTest";
             break;
         case TEST_APP2:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPImageViewbindingsTest";
+            url = "https://cappuccino-testbook.5apps.com/#CPImageViewbindingsTest";
             break;
         case TEST_APP3:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPImageViewAlignmentScaling";
+            url = "https://cappuccino-testbook.5apps.com/#CPImageViewAlignmentScaling";
             break;
     }
     window.open(url, openNewTab);

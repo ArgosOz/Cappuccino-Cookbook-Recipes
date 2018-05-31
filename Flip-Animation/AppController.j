@@ -188,7 +188,7 @@ var FACE_SWITCHER = -1;
             openNewTab = "_self";
             break;
         case TEST_APP1:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPAnimatablePropertyContainerTest";
+            url = "https://cappuccino-testbook.5apps.com/#CPAnimatablePropertyContainerTest";
             break;
     }
     window.open(url, openNewTab);

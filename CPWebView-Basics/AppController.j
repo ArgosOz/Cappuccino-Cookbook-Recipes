@@ -84,10 +84,10 @@
             openNewTab = "_self";
             break;
         case TEST_APP:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPWebViewTest";
+            url = "https://cappuccino-testbook.5apps.com/#CPWebViewTest";
             break;
         case TEST_APP2:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPWebViewTest2";
+            url = "https://cappuccino-testbook.5apps.com/#CPWebViewTest2";
             break;
     }
     window.open(url, openNewTab);

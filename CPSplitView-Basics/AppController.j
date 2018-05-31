@@ -78,7 +78,7 @@
             openNewTab = "_self";
             break;
         case TEST_APP:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPSplitViewTest";
+            url = "https://cappuccino-testbook.5apps.com/#CPSplitViewTest";
             break;
     }
     window.open(url, openNewTab);

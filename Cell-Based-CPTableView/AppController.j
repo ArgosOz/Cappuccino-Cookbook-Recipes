@@ -163,55 +163,55 @@
             openNewTab = "_self";
             break;
         case CPTableViewGroupRows:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPTableViewGroupRows";
+            url = "https://cappuccino-testbook.5apps.com/#CPTableViewGroupRows";
             break;
         case BorderTableTest:
-            url = "https://cappuccino-testbook.5apps.com/?t=BorderTableTest";
+            url = "https://cappuccino-testbook.5apps.com/#BorderTableTest";
             break;
         case ColumnResize:
-            url = "https://cappuccino-testbook.5apps.com/?t=ColumnResize";
+            url = "https://cappuccino-testbook.5apps.com/#ColumnResize";
             break;
         case ColumnSizing2:
-            url = "https://cappuccino-testbook.5apps.com/?t=ColumnSizing2";
+            url = "https://cappuccino-testbook.5apps.com/#ColumnSizing2";
             break;
         case DataView:
-            url = "https://cappuccino-testbook.5apps.com/?t=DataView";
+            url = "https://cappuccino-testbook.5apps.com/#DataView";
             break;
         case DelegateSelectionTest:
-            url = "https://cappuccino-testbook.5apps.com/?t=DelegateSelectionTest";
+            url = "https://cappuccino-testbook.5apps.com/#DelegateSelectionTest";
             break;
         case DragAndDrop:
-            url = "https://cappuccino-testbook.5apps.com/?t=DragAndDrop";
+            url = "https://cappuccino-testbook.5apps.com/#DragAndDrop";
             break;
         case Editing:
-            url = "https://cappuccino-testbook.5apps.com/?t=Editing";
+            url = "https://cappuccino-testbook.5apps.com/#Editing";
             break;
         case EditingControls:
-            url = "https://cappuccino-testbook.5apps.com/?t=EditingControls";
+            url = "https://cappuccino-testbook.5apps.com/#EditingControls";
             break;
         case GroupRowTest:
-            url = "https://cappuccino-testbook.5apps.com/?t=GroupRowTest";
+            url = "https://cappuccino-testbook.5apps.com/#GroupRowTest";
             break;
         case HeaderCornerView:
-            url = "https://cappuccino-testbook.5apps.com/?t=HeaderCornerView";
+            url = "https://cappuccino-testbook.5apps.com/#HeaderCornerView";
             break;
         case OldTest:
-            url = "https://cappuccino-testbook.5apps.com/?t=OldTest";
+            url = "https://cappuccino-testbook.5apps.com/#OldTest";
             break;
         case TableBindings:
-            url = "https://cappuccino-testbook.5apps.com/?t=TableBindings";
+            url = "https://cappuccino-testbook.5apps.com/#TableBindings";
             break;
         case TableCibTest:
-            url = "https://cappuccino-testbook.5apps.com/?t=TableCibTest";
+            url = "https://cappuccino-testbook.5apps.com/#TableCibTest";
             break;
         case TestTableColumn:
-            url = "https://cappuccino-testbook.5apps.com/?t=TestTableColumn";
+            url = "https://cappuccino-testbook.5apps.com/#TestTableColumn";
             break;
         case VariableRows:
-            url = "https://cappuccino-testbook.5apps.com/?t=VariableRows";
+            url = "https://cappuccino-testbook.5apps.com/#VariableRows";
             break;
         case ViewBasedCib:
-            url = "https://cappuccino-testbook.5apps.com/?t=ViewBasedCib";
+            url = "https://cappuccino-testbook.5apps.com/#ViewBasedCib";
             break;
     }
     window.open(url, openNewTab);

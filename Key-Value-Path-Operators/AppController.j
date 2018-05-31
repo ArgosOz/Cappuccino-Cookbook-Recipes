@@ -100,10 +100,10 @@
         //     openNewTab = "_self";
         //     break;
         // case TEST_APP1:
-        //     url = "https://cappuccino-testbook.5apps.com/?t=ContinuouslyUpdatesValueBinding";
+        //     url = "https://cappuccino-testbook.5apps.com/#ContinuouslyUpdatesValueBinding";
         //     break;
         // case TEST_APP2:
-        //     url = "https://cappuccino-testbook.5apps.com/?t=MultipleValueBindings";
+        //     url = "https://cappuccino-testbook.5apps.com/#MultipleValueBindings";
         //     break;          
     }
     window.open(url, openNewTab);

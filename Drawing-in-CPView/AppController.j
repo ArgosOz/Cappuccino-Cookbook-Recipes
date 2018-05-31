@@ -84,7 +84,7 @@
             openNewTab = "_self";
             break;
         case TEST_APP1:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPViewController";
+            url = "https://cappuccino-testbook.5apps.com/#CPViewController";
             break;
     }
     window.open(url, openNewTab);

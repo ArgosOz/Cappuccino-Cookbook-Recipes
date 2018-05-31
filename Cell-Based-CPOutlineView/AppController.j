@@ -98,13 +98,13 @@
             openNewTab = "_self";
             break;
         case TEST_APP1:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPOutlineViewTest";
+            url = "https://cappuccino-testbook.5apps.com/#CPOutlineViewTest";
             break;
         case TEST_APP2:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPOutlineViewCibTest";
+            url = "https://cappuccino-testbook.5apps.com/#CPOutlineViewCibTest";
             break;
         case TEST_APP3:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPOutlineViewViewBasedCibTest";
+            url = "https://cappuccino-testbook.5apps.com/#CPOutlineViewViewBasedCibTest";
             break;
     }
     window.open(url, openNewTab);

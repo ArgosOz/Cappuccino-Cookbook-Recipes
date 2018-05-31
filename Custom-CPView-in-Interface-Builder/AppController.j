@@ -81,7 +81,7 @@
             openNewTab = "_self";
             break;
         case TEST_APP1:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPViewController";
+            url = "https://cappuccino-testbook.5apps.com/#CPViewController";
             break;
         case TUTORIAL:
             url = "http://www.cappuccino-project.org/learn/xcode-basics.html";

@@ -80,7 +80,7 @@
             openNewTab = "_self";
             break;
         /* case TEST_APP1: */
-        /*     url = "https://cappuccino-testbook.5apps.com/?t=KeyEquivalents"; */
+        /*     url = "https://cappuccino-testbook.5apps.com/#KeyEquivalents"; */
         /*     break; */
     }
     window.open(url, openNewTab);

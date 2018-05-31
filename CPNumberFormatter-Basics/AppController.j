@@ -92,7 +92,7 @@
             openNewTab = "_self";
             break;
         /* case TEST_APP1: */
-        /*     url = "https://cappuccino-testbook.5apps.com/?t=CPDateFormatterTest"; */
+        /*     url = "https://cappuccino-testbook.5apps.com/#CPDateFormatterTest"; */
         /*     break; */
     }
     window.open(url, openNewTab);

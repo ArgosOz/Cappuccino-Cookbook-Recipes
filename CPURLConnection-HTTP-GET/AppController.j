@@ -119,7 +119,7 @@
             openNewTab = "_self";
             break;
         // case TEST_APP1:
-        //     url = "https://cappuccino-testbook.5apps.com/?t=KeyViewLoopTest";
+        //     url = "https://cappuccino-testbook.5apps.com/#KeyViewLoopTest";
         //     break;
     }
     window.open(url, openNewTab);

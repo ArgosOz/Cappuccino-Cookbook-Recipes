@@ -115,7 +115,7 @@
             openNewTab = "_self";
             break;
         case TEST_APP1:
-            url = "https://cappuccino-testbook.5apps.com/?t=CPAlertTest";
+            url = "https://cappuccino-testbook.5apps.com/#CPAlertTest";
             break;
     }
     window.open(url, openNewTab);

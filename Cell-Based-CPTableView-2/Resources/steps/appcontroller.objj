@@ -1,0 +1,21 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+/*
+We import previously created TableViewController class here.
+*/
+@import "TableViewController.j"
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow        theWindow;
+}
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

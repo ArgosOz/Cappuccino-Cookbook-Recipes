@@ -1,0 +1,30 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow        theWindow;
+
+    @outlet CPTextField     _label;
+    @outlet CPSlider        _slider;
+}
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{
+    [_slider setIntValue:25];
+    [_label setIntValue:[_slider intValue]]; 
+}
+
+
+- (IBAction) sliderChange:(id)sender
+{
+    [_label setIntValue:[_slider intValue]];
+}
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

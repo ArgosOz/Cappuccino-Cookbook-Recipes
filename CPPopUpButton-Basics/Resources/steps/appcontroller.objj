@@ -1,0 +1,35 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow        theWindow;
+
+    @outlet CPPopUpButton   _popUp;
+    @outlet CPTextField     _textField;
+    @outlet CPTextField     _label;
+}
+
+
+
+- (IBAction) buttonClicked:(id)sender
+{
+    [_popUp addItemWithTitle:[_textField stringValue]];
+}
+
+
+
+- (IBAction) updateLabel:(id)sender
+{
+    [_label setStringValue:[_popUp titleOfSelectedItem]];
+}
+
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

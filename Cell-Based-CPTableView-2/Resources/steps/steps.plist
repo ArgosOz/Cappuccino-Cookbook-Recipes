@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>step</key>
+		<string>Create a new project...</string>
+		<key>timestamp</key>
+		<integer>1526499222</integer>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-New-Project/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-new-project.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Setup the new project in the Xcode Interface Builder...</string>
+		<key>timestamp</key>
+		<real>1526499223</real>
+		<key>baseURL</key>
+		<string>../Steps/Setup-a-new-Project/</string>
+		<key>subStepsFileName</key>
+		<string>setup-a-new-project.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Create Superhero.j class...</string>
+		<key>timestamp</key>
+		<real>1521099225</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>create-superhero-file.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Create TableViewController.j class...</string>
+		<key>timestamp</key>
+		<real>1521100226</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>create-tableviewcontroller.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Open the AppController.j file...</string>
+		<key>timestamp</key>
+		<real>1526499225</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>appcontroller.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Create a &quot;Cell Based Table View&quot;</string>
+		<key>timestamp</key>
+		<real>1526499235</real>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-Cell-Based-Table-View/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-cell-based-table-view.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Set table headers...</string>
+		<key>timestamp</key>
+		<real>1986499299</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>set-table-headers.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Set table column identifiers...</string>
+		<key>timestamp</key>
+		<real>1986499399</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>set-column-identifiers.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Create Table View Controller object in the Xcode...</string>
+		<key>timestamp</key>
+		<real>1986409309</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>create-tableviewcontroller-xcode.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Create the &quot;Add&quot; button...</string>
+		<key>timestamp</key>
+		<real>1526222222</real>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-Button/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-button.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Create the &quot;Remove&quot; button...</string>
+		<key>timestamp</key>
+		<real>1555333222</real>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-Button/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-button.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Connect the addButtonClicked: action to the Add button...</string>
+		<key>timestamp</key>
+		<real>1526555256</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>connect-add-button-to-action.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Connect the removeButtonClicked: action to the Remove button...</string>
+		<key>timestamp</key>
+		<real>1526199257</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>connect-remove-button-to-action.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Connect the _tableView outlet to the Table View...</string>
+		<key>timestamp</key>
+		<real>1584405332</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>connect-tableview-outlet.plist</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>step</key>
+		<string>Create a new project...</string>
+		<key>timestamp</key>
+		<integer>1526499222</integer>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-New-Project/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-new-project.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Setup the new project in the Xcode Interface Builder...</string>
+		<key>timestamp</key>
+		<real>1526499223</real>
+		<key>baseURL</key>
+		<string>../Steps/Setup-a-new-Project/</string>
+		<key>subStepsFileName</key>
+		<string>setup-a-new-project.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Open the AppController.j file...</string>
+		<key>timestamp</key>
+		<real>1526499225</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>appcontroller.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Create a &quot;Label&quot;</string>
+		<key>timestamp</key>
+		<real>1526799226</real>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-Label/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-label.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Create a &quot;Horizontal Slider&quot; and select it...</string>
+		<key>timestamp</key>
+		<real>1526499235</real>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-Slider/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-slider-and-select.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Check the Slider&apos;s &quot;Continuous&quot; option.</string>
+		<key>timestamp</key>
+		<real>1526333235</real>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-Slider/</string>
+		<key>subStepsFileName</key>
+		<string>check-continous.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Connect the sliderChange: action to the Slider...</string>
+		<key>timestamp</key>
+		<real>1526555256</real>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-Slider/</string>
+		<key>subStepsFileName</key>
+		<string>connect-slider-to-action.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Connect the _label outlet to the Label...</string>
+		<key>timestamp</key>
+		<real>1526199257</real>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-Label/</string>
+		<key>subStepsFileName</key>
+		<string>connect-label-outlet.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Connect the _slider outlet to the Slider...</string>
+		<key>timestamp</key>
+		<real>1526499256</real>
+		<key>baseURL</key>
+		<string>../Steps/Create-a-Slider/</string>
+		<key>subStepsFileName</key>
+		<string>connect-slider-outlet.plist</string>
+	</dict>
+</array>
+</plist>

@@ -1,6 +1,6 @@
 /*
  * AppController.j
- * CPDatePicker-Basics
+ * CPPopUpButton-Basics
  *
  * Created by Argos Oz on June 9, 2018.
  * Copyright 2018, Army of Me, Inc. All rights reserved.
@@ -11,13 +11,14 @@
 
 @import <MBSteps/StepsWindowController.j>
 
+
 @implementation AppController : CPObject
 {
-    @outlet CPWindow            theWindow;
+    @outlet CPWindow    		theWindow;
 
-    @outlet CPTextField     	_label;
-    @outlet CPTextField     	_nameField;
-    @outlet CPDatePicker    	_datePicker;
+    @outlet CPPopUpButton       _popUp;
+    @outlet CPTextField         _textField;
+    @outlet CPTextField         _label;    
 
             CPWindowController  _stepsWindowController;
 }
@@ -32,19 +33,23 @@
     
 
     var currentFrameSize = [[_stepsWindowController window] frame].size;
-    var newHeight = ([[_stepsWindowController tableView] rowHeight] * 11) + 63;
+    var newHeight = ([[_stepsWindowController tableView] rowHeight] * 13) + 63;
     [[_stepsWindowController window] setFrameSize:CGSizeMake(currentFrameSize.width, newHeight)];
 
-    [_stepsWindowController showWindow:self];    
-
-    [_datePicker setDateValue:[CPDate date]];
+    [_stepsWindowController showWindow:self]; 
 }
+
 
 - (IBAction) buttonClicked:(id)sender
-{ 
-    var string = [CPString stringWithFormat:@"%@ was here at %@", [_nameField stringValue], [_datePicker dateValue]];
-    [_label setStringValue:string];
+{
+    [_popUp addItemWithTitle:[_textField stringValue]];
 }
+
+- (IBAction) updateLabel:(id)sender
+{
+    [_label setStringValue:[_popUp titleOfSelectedItem]];
+}
+
 
 - (void)awakeFromCib
 {
@@ -57,6 +62,7 @@
     var CLASS_REFERENCE = 1;
 
     var TEST_APP1 = 2;
+    var TEST_APP2 = 3;
 
 
     var DASH = 999;
@@ -65,20 +71,23 @@
     var openNewTab = "_blank";
     switch([sender tag]){
         case GITHUB_REPO:
-            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPDatePicker-Basics";
+            url = "https://github.com/ArgosOz/Cappuccino-Cookbook-Recipes/tree/master/CPPopUpButton-Basics";
             break;
         case CLASS_REFERENCE:
-            url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_date_picker.html";
+            url = "http://www.cappuccino-project.org/learn/documentation/interface_c_p_pop_up_button.html";
             break;
         case APPLE_REFERENCE:
-            url = "https://developer.apple.com/documentation/appkit/nsdatepicker?language=objc";
+            url = "https://developer.apple.com/documentation/appkit/nspopupbutton?language=objc";
             break;
         case DASH:
-            url = "dash://cappuccino:CPDatePicker";
+            url = "dash://cappuccino:CPPopUpButton";
             openNewTab = "_self";
             break;
         case TEST_APP1:
-            url = "https://cappuccino-testbook.5apps.com/#CPDatePickerTest";
+            url = "https://cappuccino-testbook.5apps.com/#CPPopUpButtonTest";
+            break;
+        case TEST_APP2:
+            url = "https://cappuccino-testbook.5apps.com/#CPPopUpButtonBindings";
             break;
     }
     window.open(url, openNewTab);

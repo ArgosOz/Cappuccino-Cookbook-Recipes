@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Create a text file and rename it to Hello.j</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Copy the code below...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Paste it into Hello.j file...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>2</integer>
+		<key>language</key>
+		<string>objc</string>
+		<key>codeFileURL</key>
+		<string>Resources/steps/hello.objj</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,11 @@
+@import &lt;Foundation/CPObject.j&gt;
+
+@implementation Hello : CPObject
+{}
+
+- (void) sayHello
+{
+    console.info("Hello");
+}
+
+@end

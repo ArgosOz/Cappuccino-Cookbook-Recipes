@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Open Terminal and go to your project folder and type this:</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>2</integer>
+		<key>language</key>
+		<string>bash</string>
+		<key>code</key>
+		<string>jake deploy</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>After that go to the folder below...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>2</integer>
+		<key>language</key>
+		<string>bash</string>
+		<key>code</key>
+		<string>Build/Deployment/Faster-Load-Times/Frameworks/AppKit/Browser.environment/</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>And check the file size of the AppKit.sj </string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>It should be about 2.5 MB</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>We saved more than 50%</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>Now go to the folder below...</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>2</integer>
+		<key>language</key>
+		<string>bash</string>
+		<key>code</key>
+		<string>Build/Deployment/Faster-Load-Times/Frameworks/Foundation/ObjJ.environment/</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>And check the file size of the Foundation.sj </string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>It should be about 780 KB</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>0</integer>
+		<key>content</key>
+		<string>We saved about 35%</string>
+	</dict>
+</array>
+</plist>

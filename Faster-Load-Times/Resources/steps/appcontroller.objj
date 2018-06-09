@@ -1,0 +1,34 @@
+/*
+Import directives below commented out to avoid
+importing all the classes in Foundation and AppKit frameworks.
+*/
+//@import &lt;Foundation/Foundation.j&gt;
+//@import &lt;AppKit/AppKit.j&gt;
+
+/*
+We need to import CPObject, CPWindow and CPScrollView.
+This is the minimum we need to run a GUI app.
+*/
+@import &lt;Foundation/CPObject.j&gt;
+
+@import &lt;AppKit/CPWindow.j&gt;
+@import &lt;AppKit/CPScrollView.j&gt;
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+}
+
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{}
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+
+@end

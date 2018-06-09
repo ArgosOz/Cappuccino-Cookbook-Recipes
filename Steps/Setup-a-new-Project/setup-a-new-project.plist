@@ -6,7 +6,7 @@
 		<key>type</key>
 		<integer>0</integer>
 		<key>content</key>
-		<string>Open XcodeCapp app and click on the hammer icon to open the project in Xcode...</string>
+		<string>Open the XcodeCapp app and click on the hammer icon to open the project in the Xcode...</string>
 	</dict>
 	<dict>
 		<key>type</key>
@@ -28,7 +28,7 @@
 		<key>type</key>
 		<integer>0</integer>
 		<key>content</key>
-		<string>Go bottom left side of your Xcode window and click &quot;Show Document Outline&quot; button...</string>
+		<string>Go bottom left side of the Xcode window and click &quot;Show Document Outline&quot; button...</string>
 	</dict>
 	<dict>
 		<key>type</key>

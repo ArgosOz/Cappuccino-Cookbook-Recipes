@@ -24,13 +24,13 @@
 		<key>type</key>
 		<integer>0</integer>
 		<key>content</key>
-		<string>Check &quot;Bind to&quot; and select &quot;Delegate from the options list...</string>
+		<string>Check &quot;Bind to&quot;</string>
 	</dict>
 	<dict>
 		<key>type</key>
 		<integer>0</integer>
 		<key>content</key>
-		<string>Check &quot;Bind to&quot; and select &quot;Delegate from the options list...</string>
+		<string>Select &quot;Delegate from the options list...</string>
 	</dict>
 	<dict>
 		<key>type</key>

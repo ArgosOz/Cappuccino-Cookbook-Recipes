@@ -1,0 +1,38 @@
+/*
+Import directives below commented out to avoid
+importing all the classes in Foundation and AppKit frameworks.
+*/
+
+// @import &lt;Foundation/Foundation.j&gt; 
+// @import &lt;AppKit/AppKit.j&gt; 
+
+/*
+Since we won't use AppKit framework
+We don't need an app delegate.
+So AppController.j import has been commented out.
+*/
+//@import "AppController.j"
+
+/*
+This is our little Hello object.
+It will say hello.
+*/
+@import "Hello.j"
+
+
+function main(args, namedArgs)
+{
+    /* 
+    Since we won't use AppKit framework 
+    We don't need to call CPApplicationMain function
+    */
+    // CPApplicationMain(args, namedArgs);
+    
+    /*
+    But we need to initialize our Hello object
+    and send sayHello message to it.
+    */
+    var hello = [[Hello alloc] init];    
+    [hello sayHello];    
+}
+

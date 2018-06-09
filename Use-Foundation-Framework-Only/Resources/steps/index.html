@@ -1,0 +1,35 @@
+&lt;!--
+With this setup,
+we can use Objective-J syntax and Foundation framework objects
+without AppKit.
+You can use and mix them with any Javascript library.
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;FoundationApp&lt;/title&gt;
+
+        &lt;script type="text/javascript"&gt;  
+            /*
+            This is our main entry point...
+            */          
+            OBJJ_MAIN_FILE = "main.j";
+            /*
+            Set compiler options.
+            */
+            OBJJ_COMPILER_FLAGS = [/*"IncludeDebugSymbols"*/, 
+                                   "IncludeTypeSignatures"/*, 
+                                   "SourceMap"*/, 
+                                   "InlineMsgSend"];
+        &lt;/script&gt;
+
+        &lt;!--
+        Load Objective-J compiler.
+        --&gt;
+        &lt;script type="text/javascript" 
+                    src="Frameworks/Objective-J/Objective-J.js"&gt;
+        &lt;/script&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;

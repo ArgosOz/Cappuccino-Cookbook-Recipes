@@ -1,0 +1,35 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow            theWindow;
+
+    @outlet CPTextField         _label;
+    @outlet CPTextField         _nameField;
+    @outlet CPDatePicker        _dateField;
+}
+
+- (void)applicationDidFinishLaunching:(CPNotification)aNotification
+{
+    [_dateField setDateValue:[CPDate date]];
+}
+
+
+- (IBAction) buttonClicked:(id)sender
+{ 
+    var string = [CPString stringWithFormat:@"%@ was here at %@", 
+                           [_nameField stringValue], 
+                           [_dateField dateValue]
+                           ];
+    
+    [_label setStringValue:string];
+}
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

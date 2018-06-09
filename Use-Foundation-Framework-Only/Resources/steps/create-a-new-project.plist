@@ -34,43 +34,5 @@
 		<key>content</key>
 		<string> </string>
 	</dict>
-	<dict>
-		<key>type</key>
-		<integer>1</integer>
-		<key>width</key>
-		<integer>540</integer>
-		<key>height</key>
-		<integer>58</integer>
-		<key>imageName</key>
-		<string>101.png</string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>0</integer>
-		<key>content</key>
-		<string>Now open the XcodeCapp app and add __PROJECT_NAME__ to the project list by pressing the plus icon located at the bottom left corner of the app.</string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>0</integer>
-		<key>content</key>
-		<string> </string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>0</integer>
-		<key>content</key>
-		<string>And that&apos;s it. Press play button to begin keep tracking __PROJECT_NAME__ project through the XcodeCapp.</string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>1</integer>
-		<key>width</key>
-		<integer>540</integer>
-		<key>height</key>
-		<integer>57</integer>
-		<key>imageName</key>
-		<string>102.png</string>
-	</dict>
 </array>
 </plist>

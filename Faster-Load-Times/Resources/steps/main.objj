@@ -1,0 +1,37 @@
+/*
+Import directives below commented out to avoid
+importing all the classes in Foundation and AppKit frameworks.
+*/
+
+// @import &lt;Foundation/Foundation.j&gt; 
+// @import &lt;AppKit/AppKit.j&gt; 
+
+/*
+AppKit's file size is about 5.3 MB 
+and gzipped AppKit is about 526 KB.
+Foundation's file size is about 1.2 MB 
+and gzipped Foundation is about 133 KB.
+
+Plus, the browser will spend some time
+while parsing the frameworks.
+
+So smaller file size is better.
+
+We're going to import only what we need here.
+Later we'll do a "jake deploy" and as a result of it
+only the classes we've imported 
+will be deployed with the frameworks.
+
+In main.j, we only need CPApplication 
+from the AppKit framework.
+*/
+@import &lt;AppKit/CPApplication.j&gt;
+
+// And of course we import our app delegate.
+@import "AppController.j"
+
+function main(args, namedArgs)
+{
+    CPApplicationMain(args, namedArgs);
+}
+

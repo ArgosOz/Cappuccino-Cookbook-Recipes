@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>step</key>
+		<string>Create a new project...</string>
+		<key>timestamp</key>
+		<integer>1526499222</integer>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>create-a-new-project.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Modify index.html</string>
+		<key>timestamp</key>
+		<real>1526699276</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>index.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Create Hello.j and subclass CPObject </string>
+		<key>timestamp</key>
+		<real>1526499276</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>hello.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Open main.j file...</string>
+		<key>timestamp</key>
+		<real>1526499225</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>main.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Delete unnecessary files and folders...</string>
+		<key>timestamp</key>
+		<real>1526199225</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>deletefiles.plist</string>
+	</dict>
+	<dict>
+		<key>step</key>
+		<string>Deploy the project...</string>
+		<key>timestamp</key>
+		<real>1526499224</real>
+		<key>baseURL</key>
+		<string>Resources/steps/</string>
+		<key>subStepsFileName</key>
+		<string>deploy.plist</string>
+	</dict>
+</array>
+</plist>

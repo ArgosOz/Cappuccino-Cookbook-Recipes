@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1050" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="450" id="451"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu title="AMainMenu" systemMenu="main" id="29" userLabel="MainMenu">
+            <items>
+                <menuItem title="CPMenu Basics" id="56">
+                    <menu key="submenu" title="CPMenu Basics" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About..." id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Links" id="103">
+                    <menu key="submenu" title="Links" id="106">
+                        <items>
+                            <menuItem title="GitHub Repository for this Project..." keyEquivalent="g" id="Ngt-wZ-vsP">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="Hiy-qq-bcB"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Class Reference..." tag="1" keyEquivalent="C" id="upS-0t-HuR">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="8bI-DN-NX1"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Apple Class Reference..." tag="981" keyEquivalent="A" id="2YP-EQ-HPN">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="epT-L8-7HL"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="rqb-cv-TYN">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="Ob5-yh-aR6"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="e8q-pb-Bzx"/>
+                            <menuItem title="CPMenuTest..." tag="2" id="VjL-2J-Urb">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="rs9-Of-jp8"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="CPMenuEnabledBindingsTest..." tag="3" id="1kl-TR-pu3">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="X2D-8d-c62"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="CPMenuKeyEquivalents..." tag="4" id="7Sv-2h-sR7">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="MHX-0l-ScV"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="CPMenuRemoveAllTest..." tag="5" id="1ID-bI-nZO">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="nYa-0p-kE0"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="UndoRedoWithMenuUpdate..." tag="6" id="7AF-Bq-K4i">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="HLI-wS-IsO"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Test Menu" id="lUy-h7-Tvg">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Test Menu" id="oy6-Lq-rE5">
+                        <items>
+                            <menuItem title="Say Hello" id="noK-HN-0Vq">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="sayHello:" target="450" id="IxJ-NX-3yN"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Say Goodbye" id="0wL-SF-QtZ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="sayGoodbye:" target="450" id="xxT-gQ-q6m"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <view key="contentView" id="372">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="LMg-i4-kKY">
+                        <rect key="frame" x="18" y="316" width="177" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Zhh-iF-uSQ">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="248" y="497"/>
+        </window>
+        <customObject id="450" customClass="AppController">
+            <connections>
+                <outlet property="_label" destination="LMg-i4-kKY" id="CeU-Xm-S3j"/>
+                <outlet property="theWindow" destination="371" id="459"/>
+            </connections>
+        </customObject>
+    </objects>
+</document>

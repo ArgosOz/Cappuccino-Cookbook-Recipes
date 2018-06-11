@@ -1,0 +1,29 @@
+@import &lt;Foundation/Foundation.j&gt;
+@import &lt;AppKit/AppKit.j&gt;
+
+
+@implementation AppController : CPObject
+{
+    @outlet CPWindow        theWindow;
+
+    @outlet CPTextField     _label;
+}
+
+
+- (IBAction) sayHello:(id)sender
+{
+    [_label setStringValue:@"Hello"];
+}
+
+- (IBAction) sayGoodbye:(id)sender
+{
+    [_label setStringValue:@"Goodbye"];
+}
+
+
+- (void)awakeFromCib
+{
+    [theWindow setFullPlatformWindow:YES];
+}
+
+@end

@@ -88,6 +88,7 @@
 
     var DASH = 999;
     var APPLE_REFERENCE = 981;
+    var NSHIPSTER_REFERENCE = 972;
 
     var url;
     var openNewTab = "_blank";
@@ -100,6 +101,9 @@
             break;
         case APPLE_REFERENCE:
             url = "https://developer.apple.com/documentation/foundation/nsdateformatter#//apple_ref/occ/cl/NSDateFormatter";
+            break;
+        case NSHIPSTER_REFERENCE:
+            url = "http://nshipster.com/nsformatter/";
             break;
         case DASH:
             url = "dash://cappuccino:CPDateFormatter";

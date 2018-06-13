@@ -12,7 +12,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <menu title="AMainMenu" systemMenu="main" id="29" userLabel="MainMenu">
             <items>
                 <menuItem title="CPKeyedUnarchiver - Load Your Class" id="56">
@@ -46,6 +46,12 @@
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
                                     <action selector="openLinkInNewTab:" target="450" id="ac4-m4-zCC"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="NSHipster Class Reference..." tag="972" keyEquivalent="H" id="DPz-Hi-PjE">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="xgP-iS-2x8"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="AIs-Fq-4cb">

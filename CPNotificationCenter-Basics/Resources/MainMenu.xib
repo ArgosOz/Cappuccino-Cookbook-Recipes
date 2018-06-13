@@ -12,7 +12,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <menu title="AMainMenu" systemMenu="main" id="29" userLabel="MainMenu">
             <items>
                 <menuItem title="CPNotificationCenter Basics" id="56">
@@ -46,6 +46,12 @@
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
                                     <action selector="openLinkInNewTab:" target="450" id="Ugs-OA-UyP"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="NSHipster Class Reference..." tag="972" keyEquivalent="H" id="mlO-EV-wV8">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="y8r-9U-VJT"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="51P-xc-0vJ">

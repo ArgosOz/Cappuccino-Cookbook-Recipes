@@ -70,6 +70,9 @@
 
     var DASH = 999;
     var APPLE_REFERENCE = 981;
+    var NSHIPSTER_REFERENCE = 972;
+
+    
     var url;
     var openNewTab = "_blank";
     switch([sender tag]){
@@ -82,6 +85,9 @@
         case APPLE_REFERENCE:
             url = "https://developer.apple.com/documentation/foundation/nskeyedarchiver?language=objc";
             break;
+        case NSHIPSTER_REFERENCE:
+            url = "http://nshipster.com/nscoding/";
+            break;            
         case DASH:
             url = "dash://cappuccino:CPKeyedArchiver";
             openNewTab = "_self";

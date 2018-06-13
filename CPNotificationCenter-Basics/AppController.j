@@ -58,6 +58,7 @@
 {
     var GITHUB_REPO = 0;
     var CLASS_REFERENCE = 1;
+    var NSHIPSTER_REFERENCE = 972;
 
     // var TEST_APP1 = 2;
 
@@ -76,6 +77,9 @@
         case APPLE_REFERENCE:
             url = "https://developer.apple.com/documentation/foundation/nsnotificationcenter?language=occ";
             break;
+        case NSHIPSTER_REFERENCE:
+            url = "http://nshipster.com/nsnotification-and-nsnotificationcenter/";
+            break;            
         case DASH:
             url = "dash://cappuccino:CPNotificationCenter";
             openNewTab = "_self";

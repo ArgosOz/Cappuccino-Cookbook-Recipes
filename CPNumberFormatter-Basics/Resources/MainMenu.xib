@@ -48,6 +48,12 @@
                                     <action selector="openLinkInNewTab:" target="450" id="Bim-H5-cQT"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="NSHipster Class Reference..." tag="972" keyEquivalent="H" id="YTO-MF-vUO">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="openLinkInNewTab:" target="450" id="19O-ys-Mwa"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Read more in Kapeli Dash..." tag="999" keyEquivalent="D" id="Yx6-u2-sf3">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
